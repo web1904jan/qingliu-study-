@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>清流教育</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+/*  */
+*{
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.hea{
+	position: fixed;
+	z-index: 10;
+    margin-top: -102px;
+}
+.foo{
+		height: 470px;
+	}
+.con {
+    margin-top: 103px;
+   width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.con img{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+/*  */
+.tab_head ul{
+    display: flex;
+    text-align: center;
+    margin: 20px 0;
+}
+.tab_head ul li{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head ul .show{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head span{
+    position: relative;
+	width: 100%;
+	line-height: 30px;
+	float: left;
+	list-style: none;
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 18px;
+}
+.tab-s1{
+    border-right: 2px solid #999999;
+    border-left: 2px solid #999999;
+}
+
+.init{
+	clear: both;
+	width: 100%;
+	height:100%;
+	display: none;
+	border-top: none;
+    position: relative;
+}
+.show{
+	display: block;
+}
+/*  */
+            .box-11{
+            width: 100%;
+            height:800px;    
+        }
+        .info{
+            position: absolute;
+            width: 70%;
+            height:70%;
+            position: absolute;
+			top: 50%;
+			left: 50%;
+			/* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中 */
+			transform: translate(-50%,-50%);
+            border-radius: 20px;
+            background-color: #555555;
+            opacity: 0.8;
+            z-index: 10000;
+            text-align: center;
+        }
+        /*  */
+        .title{
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+        /*  */
+       .line{
+           display: flex;
+           justify-content: center;
+       }
+       .line1{
+           width: 100px;
+           height: 1px;
+           border:1px solid #ffffff;
+           margin: 10px;
+       }
+       .yuan{
+            color:#ffffff;
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan2{
+           color:#ffffff;
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px 0px 0 0px;
+       }
+       .infos{
+           /* margin-left: 25%;
+           margin-top:50px; */
+           width: 80%;
+           position: absolute;
+           top: 50%;
+			left: 50%;
+			/* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中 */
+			transform: translate(-50%,-50%);
+       }
+       .infos p{
+           color: #ffffff;
+           line-height: 50px;
+           /* text-align:left; */
+           margin: 0 20px ;
+           text-align: justify;text-justify:inter-ideograph;
+       }
+       /* 2 */
+       .name{
+           width: 50%;
+           position: absolute;
+           top: 90%;
+		   right:1%;
+           color: #ffffff;
+           font-weight: bold;
+           font-size: 150%;
+       }
+       .til{
+           border-top: 2px solid  rgb(133, 168, 202);
+       }
+       .title2{
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+            color: #000000;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px  10px 0 10px;
+       }
+       .speak{
+        width: 100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+       }
+       .yin{
+           width: 50px;
+           height: 35px;
+           margin-left: 15%;
+           
+       }
+       .yin img { 
+           width: 100%;
+           height: 100%;
+       }
+       .yin2{
+           width: 50px;
+           height: 35px;
+           margin-left: 80%;
+
+       }
+       .yin2 img { 
+           width: 100%;
+           height: 100%;
+       }
+       .left {
+           width: 15%;
+           height:20%;
+       }
+       .left img{
+           width: 100%;
+           height: 100%;
+           border-radius: 25px;
+           box-shadow: 20px -20px 0  #9fb0da;
+       }
+       .right{
+           width:40%;
+           height: 100%;
+           line-height: 35px;
+           margin-left: 5%;
+       }
+       .right span{
+           /* text-align: left; */
+           text-align: justify;text-justify:inter-ideograph;
+       }
+       
+       /* 3 */
+       .title2{
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+            color: #000000;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px  10px 0 10px;
+       }
+       .bg-tab{
+           width:100%;
+           height: 100%;
+           display: flex;
+           justify-content: center; 
+       }
+       #table{
+           width: 100%;
+           text-align: center;
+           border-collapse: collapse;
+       }
+       #table caption{ 
+           font-size: 22px;
+           /* font-weight: bold; */
+           margin:20px  0;
+       }
+       .table tr{
+         
+        height: 50px;
+        color:rgba(5, 61, 99, 0.945);
+       }
+       .table tr th{
+           width: 30%;
+           font-size: 20px;
+           font-weight: bold;
+           border-right: 2px dashed  #808eb1;
+           padding: 0 40px;
+           text-align: right;
+       }
+       .table tr td{
+           padding: 0 40px;
+           text-align: left;
+           /* border-left: 3px dotted rgba(4, 153, 252, 0.945); */
+       }
+       .lastname{
+           margin: 40px 0 20px 0;
+           text-align: right;
+           font-size: 18px;
+           font-weight: bold;
+           color:rgb(133, 168, 202);
+           border-bottom: 2px dashed  #3c6180;
+       }
+       .lastname p{
+           margin: 20px 40px;
+       }
+       @media screen and (min-width:666px) and (max-width:958px){
+        .infos p {
+    color: #ffffff;
+    line-height: 35px;
+    /* text-align: left; */
+    margin: 0 20px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+       }
+       @media screen and (max-width:666px){
+    .con {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.con img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+}
+.line2 {
+    display: none;
+}
+.tab_head ul {
+    display: flex;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.tab_head span {
+    position: relative;
+    width: 100%;
+    line-height: 1rem;
+    float: left;
+    list-style: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 0.8rem;
+}
+.info {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    background-color: #555555;
+    opacity: 0.8;
+    z-index: 10000;
+    text-align: center;
+}
+.infos{
+           /* margin-left: 25%;
+           margin-top:50px; */
+           width: 100%;
+           position: absolute;
+           top: 50%;
+			left: 50%;
+			/* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中 */
+			transform: translate(-50%,-50%);
+       }
+.title2 {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    color: #000000;
+}
+.title {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+.line1 {
+    width: 2rem;
+    height: 1px;
+    border: 1px solid #ffffff;
+    margin: 0.5rem;
+}
+.line{
+    display: none;
+}
+.yuan3 {
+    color:  #ffffff;
+    border-radius: 25%;
+    width: 10px;
+    height: 10px;
+}
+.yuan3 {
+    color:  #ffffff;
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: 0.1rem;
+    margin: 0.2rem 0.2rem 0 0.2rem;
+}
+.line12 {
+    width: 2rem;
+    height: 1px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 0.5rem;
+}
+.yuan2 {
+    color: rgb(133, 168, 202);
+    border-radius: 25%;
+    width: 10px;
+    height: 10px;
+}
+.yuan22 {
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: 0.1rem;
+    margin: 0.2rem 0.2rem 0 0.2rem;
+}
+#table caption {
+    font-size: 14px;
+    /* font-weight: bold; */
+    margin: 12px 0;
+}
+.table tr th {
+    width: 30%;
+    font-size: 0.2rem;
+    font-weight: bold;
+    border-right: 2px dashed #808eb1;
+    padding: 0px 1rem;
+    text-align: right;
+}
+.table tr {
+    height: 3rem;
+    color: #3c6180;
+}
+.table tr td {
+    width: 70%;
+    padding: px;
+    font-size: 0.1rem;
+    text-align: left;
+    /* margin-left: 89px; */
+    padding: 0 10px;
+    /* border-left: 3px dotted rgba(4, 153, 252, 0.945); */
+}
+.yin {
+    width: 1rem;
+    height:1rem;
+    margin-left: 3%;
+}
+.yin img {
+    width: 100%;
+    height: 100%;
+}
+.yin2 {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 93%;
+}
+.speak {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0rem 30px;
+}
+.left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem -0.2rem 0 #9fb0da;
+}
+.speak p {
+    font-size: 1rem;
+}
+.right {
+    width: 70%;
+    height: 100%;
+    line-height: 1rem;
+    margin-left: 2%;
+    font-size: 0.6rem;
+}
+.right span{
+           /* text-align: left; */
+           text-align: justify;text-justify:inter-ideograph;
+       }
+.box-11 {
+    width: 100%;
+    height: 30rem;
+}
+.infos p {
+    color: #ffffff;
+    line-height: 1rem;
+    font-size: 12px;
+    /* text-align: left; */
+    margin: 0 2rem;
+    text-align: justify;text-justify:inter-ideograph;
+}
+.name {
+    width: 50%;
+    position: absolute;
+    top: 90%;
+    right: 5%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 81%;
+}
+       }
+</style>
+</head>
+<body>
+    <!-- 头部 -->
+    <iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+    <!-- 图片 -->
+    <div class="con">
+        <img class="img" src="img/team/top-1.png" alt="">
+    </div>
+	<div class="tab_head"> 
+		<ul>
+			<li id="tab1" data-season="1" class="active"><span >公司简介</span></li>
+			<li id="tab2" data-season="2"><span class="tab-s1">创造人寄语</span></li>
+			<li id="tab3" data-season="3"><span >发展历程</span></li>
+		</ul>
+	</div>
+	<div class="tab_content">
+		<div id="content_1" class="init show">
+            <img class="box-11" src="img/team/dane-deaner-_-KLkj7on_c-unsplash.jpg" alt="">
+            <div class="info">
+                <p class="title">公司简介</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="infos">
+                    <p>清流教育是一家已成立七年的“精英陪伴式”留学咨询服务机构。通过吸纳
+                        麻省理工、剑桥、宾大、哥大、伯克利、卡梅、杜克、伦敦政经、帝国理
+                        工、港科大、港大、清北复交等国内外顶尖高校的留学精英，为承载留学
+                        梦想的广大学子提供美国、加拿大、英国、香港、新加坡等国家及地区的
+                        硕士申请服务，致力于打造职业规划——背景提升——文书撰写——行业
+                        讲解——求职咨询的一站式平台，通过我们的极致专业、细致热忱与责任
+                        心为学弟学妹们在申请路上披荆斩棘。</p>
+                </div>
+                <p class="name">QING LIU EDUCATION</p>
+            </div>
+            </img>
+        </div>
+		<div id="content_2" class="init">
+            <div class="til">
+                <p class="title2">创造人寄语</p>
+                    <div class="line2">
+                        <div class="line12"></div> 
+                        <p class="yuan2">●</p>
+                        <em class="yuan22">●</em>
+                        <p class="yuan2">●</p>
+                        <div class="line12"></div> 
+                    </div>
+            </div>
+            <div  class="yin">
+                <img src="img/team/yin.png">
+            </div>
+            <div class="speak">
+                
+                
+                <div class="left">
+                    <img src="img/team/people.png" alt="">
+                    <p class="title2">Jasper Zhao</p>
+                </div>
+                <div class="right">
+                    <span>亲爱的同学、家长们：
+                        大家好，我是清流教育的CEO JASPER ZHAO，毕业于波士顿大
+                        学金融数学硕士专业。——听到这固定的开场，老朋友们都知道，
+                        将要迎来自己六岁生日的清流教育，又陪伴大家走过了一年。不知
+                        道点开这封信的你，在世界的哪一个角落。
+                        新年快到了，我们即将迈入二十四节气里的“数九寒冬”，希望你拥
+                        有美好的一天，也希望清流曾为你留学逐梦而助力，曾用我们的微
+                        笑温暖你的生活。过去的一年里，清流教育引入流程老师角色，持
+                        续优化服务模式，在不断强化文书外的背景提升环节、虚心接纳各
+                        方的意见以及为越来越多的莘莘学子拿下理想院校的录取之外——
+                        我们全年签约学生突破100名！
+                        我们中美精英导师团队规模翻倍！
+                        我们树立了区域性精品留学咨询机构的地位！
+                        这一串踏石留痕的脚印背后，起决定性作用的，其实是我们的“有所
+                        不为”。
+                        随着清流的成长，我们始终保持理性和克制，没有选择盲目扩大产
+                        品类别，而是继续深耕“以商科为核心的硕士申请服务”，以更多资
+                        源、精力和情感的投入践行我们“陪伴式申请”的服务理念。在做好
+                        留学申请的同时，帮助同学们厘清未来的职业方向，做好不同阶段
+                        的人生规划。此外，让我最开心的却是在这条携手追梦的路上，我
+                        们中的很多人成为了彼此真正知心的朋友。
+                        你，可以放心的诉说；我，擅长聆听并给予建议。
+                        你面临选择，内心有困惑、彷徨和不安；我曾踏破歧路，可以为你
+                        的求学之旅保驾护航。
+                        通常来说，热情和时间呈现的总是负相关的趋势。但是在清流，我
+                        看到了不同。无论凌晨两点的微信轻响亦或是除夕夜晚的一封邮件
+                        ，得知你的困惑，我们的团队都不会把任何问题留到明天，因为热
+                        爱，更因为我们曾是这条追梦路上的同路人。我曾经担心过随着清
+                        流的日益成长，我们是否还能维持我们引以为傲的文书质量和服务
+                        态度，事实打消了我所有的疑虑。在清流“全新的商业模式”、“超高
+                        素质的导师团队”和“价值观向心力”三者共同的驱动下，我们的服务
+                        日益体系化，全面化，精细化，获得了越来越多的美誉和称道。
+                        大道之行，一以贯之。2018是风云汇聚的选择之年，向左走蜗行摸
+                        索荆棘密布，向右走你我扶持风雨同舟。时代在变，但是不变的是
+                        清流人的初心：做留学行业的一股清流，为更多同学的申请保驾护
+                        航！新的一年里，我们仍然是你所熟知的不打广告，只做口碑，不
+                        骄不躁的清流教育——一家没有KPI，最在乎你们的专业留学服务
+                        机构。
+                        关山难越，不做失路之人；选择清流，乐享学海竞渡。2019年，我
+                        们也将和你，一起走过！
+                        最后，祝大家新年快乐，如果您有任何想法或问题，请随时添加我
+                        的微信，我会一一回复: ZHAOJIAN1135。
+                        </span>
+                </div>
+                
+            </div>
+            <div class="yin2">
+                <img  src="img/team/yin.png">
+            </div>
+        </div>
+		<div id="content_3" class="init">
+            <div>
+                <p class="title2">发展历程</p>
+                    <div class="line2">
+                        <div class="line12"></div> 
+                        <p class="yuan2">●</p>
+                        <em class="yuan22">●</em>
+                        <p class="yuan2">●</p>
+                        <div class="line12"></div> 
+                    </div>
+            </div>
+            <div class="bg-tab">
+                <table  id="table">
+                    <caption>2013年10月清流团队初创</caption>
+                    <tbody class="table">
+                        <tr >
+                            <th >2013.10</th>
+                            <td >清流教育工作室签约第一位学员</td>
+                        </tr>
+                        <tr>
+                            <th>2016.03</th>
+                            <td>留学公众号开通分享留学干货</td>
+                            
+                        </tr>
+                        <tr>
+                            <th>2017.02</th>
+                            <td>清流教育在上海注册公司并成立销售和运营团队</td>
+                        </tr>
+                        <tr>
+                            <th>2017.12</th>
+                            <td>清流教育2017全年签约学生达54位</td>
+                        </tr>
+                        <tr>
+                            <th>2018.02</th>
+                            <td>清流教育签约总学生数突破100位</td>
+                        </tr>
+                        <tr>
+                            <th>2019.04</th>
+                            <td>上海清流办公室落定上海市北外滩星荟中心<br> 2019.04 导师人数超百人，全国签约学生总数近300人</td>
+                        </tr>
+                        <tr>
+                            <th>2018.12</th>
+                            <td>清流教育签约总学生数突破181位</td>
+                        </tr>
+                        <tr>
+                            <th>2019.06</th>
+                            <td>北京清流于海淀黄庄正式开业</td>
+                        </tr>
+                        <tr>
+                            <th>2019.10</th>
+                            <td>清流教育名师储备超200位，遍布中、美、英等地区</td>
+                        </tr>
+                        <tr>
+                            <th>2020.03</th>
+                            <td>清流教育进入第七年，总签约学生达到500位，<br>
+                                上海清流正式入驻上海顶级商圈新天地K11</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lastname">
+                <p >QING LIU EDUCATION</p>
+            </div>
+            
+        </div>		
+    </div>
+    <!-- 尾部 -->
+    <iframe src="footer.html" frameborder="0" width="100%"  scrolling="no" class="foo"></iframe>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#tab1,#tab2,#tab3").click(function() {
+			//获取标签页代号
+			var num = $.trim($(this).attr("data-season"));
+			//删除兄弟元素的 active 类样式
+			$("#tab"+num).siblings().removeClass("active");
+			$("#tab"+num).addClass("active");
+			$("#content_"+num).siblings().removeClass("show");
+			$("#content_"+num).addClass("show");
+        });
+                //隔行变色
+                $("tbody tr:even").css("background-color","#d9e3ef");//odd是奇数行    为红色
+        $("tbody tr:odd").css("background-color","white");//even是偶数行
+	})
+</script>
+</html>

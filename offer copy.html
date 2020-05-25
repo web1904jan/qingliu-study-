@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <title>清流教育</title>
+    <!-- <link rel="stylesheet"  type="text/css" href="css/all.css"> -->
+    <style type="text/css">
+        /*  */
+*{
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.hea{
+	position: fixed;
+	z-index: 10;
+    margin-top: -102px;
+}
+.foo{
+    margin-top: 20px;
+		height: 470px;
+	}
+.con {
+    margin-top: 103px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.con img{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+/*  */
+.tab_head ul{
+    display: flex;
+    text-align: center;
+    margin: 2% 0;
+}
+.tab_head ul li{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head ul .show{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head span{
+    position: relative;
+	width: 100%;
+	line-height: 16px;
+	float: left;
+	list-style: none;
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 1rem;
+}
+.tab-s1{
+    border-right: 2px solid #999999;
+}
+.init{
+	clear: both;
+	width: 100%;
+	height:100%;
+	display: none;
+    border-top: none;
+    
+}
+.show{
+	display: block;
+}
+/* title */
+       .title2{
+            text-align: center;
+            font-size: 2rem;
+            line-height: 44px;
+            margin-top: 3%;
+            color: #000000;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 10%;
+           height: 10%;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:1%;
+            height:1%;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 0.3%  1.2% 0 1%;
+       }
+       /* offer图片 */
+       
+       .name{
+           text-align: center;
+            font-size: 3rem;
+            line-height: 44px;
+            margin-top: 3%;
+            color:  rgb(133, 168, 202);
+       }
+       /* .images ,.images2{
+           display: flex;
+           flex-wrap: wrap;
+           /* width: 1920PX; */
+           /*margin:2% 5%;
+
+       } */
+       .img-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid rgb(133, 168, 202);
+    margin:20px 10px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+}
+.img-box2{
+    width: 300px;
+    margin: 20px 10px;
+}
+       .b-img{
+           width: 100%;
+           height: 100%;
+           border-radius: 25px;        
+       }
+       .img-z {
+    position: absolute;
+    width: 70%px;
+    height: 15%;
+    z-index: 1200;
+    bottom: 8%;
+    left: -5%;
+    display: flex;
+}
+.img-name {
+    width: 100%;
+    height: 22%;
+    color: #ffffff;
+    /* line-height: 85px; */
+    position: absolute;
+    font-size: 16px;
+    line-height: 70px;
+    z-index: 1200;
+    bottom: 8%;
+    text-align: left;
+}
+       .btn{
+         width: 100%;
+         height: 100%;
+         text-align: center;
+       }
+       .btn1{
+           font-size: 30px;
+           color:  rgb(133, 168, 202);
+           line-height: 30px;
+           margin: 30px auto;
+           border:0;
+           background-color: #ffffff;
+           cursor: pointer;
+       }
+       .btn11{
+           font-size: 30px;
+           color:  rgb(133, 168, 202);
+           line-height: 30px;
+           margin: 30px auto;
+           border:0;
+           background-color: #ffffff;
+           display: none;
+           cursor: pointer;
+       }
+       .hr1{
+          border: 2px solid  rgb(133, 168, 202); 
+          width: 97%;
+          height:2px;
+           margin: 5px 0 30px 0; 
+           /* margin-left: 25px;  */
+       }
+       .hr2{
+          border: 2px dashed  rgb(133, 168, 202); 
+          width: 98%;
+          height:2px;
+           margin:0 0 25px 25px;
+       }
+       .info{
+           height: 100%;
+       }
+       .info1 ,.info2{
+           width: 100%;
+           height:100%;
+           /* overflow: hidden; */
+       }
+         /* 历趣战绩 */
+       .init-1, .init-2, .init-3{
+        margin: 20px 50PX;
+        height: 100%;
+        /* overflow: hidden; */
+        /* position: relative; */
+       }
+       .init-1-name{
+           width: 100px;
+           height: 40px;
+           font-size: 30px;
+           color: #ffffff;
+           background-color: rgb(133, 168, 202);
+           text-align:center;
+           /* margin-left: 25px; */
+           border-radius: 10px;
+       }
+       .images ,.images2{
+           height: 1350px;
+           display: flex;
+           flex-wrap: wrap;
+           /* width: 1920PX; */
+           justify-content: space-around;
+           margin:2% 4.5%;
+           overflow: hidden;
+
+       }
+        /* gai  */
+       .init-info1, .init-info2, .init-info3{
+           /* position: absolute; */
+           height:750px;
+           display: flex;
+           flex-wrap: wrap;/*溢出则换行*/
+           overflow: hidden;
+           justify-content: space-around;
+           /* display: -webkit-box;   将元素作为弹性伸缩盒子模型显示 */
+           /* -webkit-line-clamp: 5;  用来限制在一个块元素显示的文本的行数 */
+           /* -webkit-box-orient: vertical;   设置或检索伸缩盒对象的子元素的排列方式 */
+       }
+       .info-box {
+    width: 550px;
+    height: 350px;
+    border-radius: 8px;
+    border: 2px solid rgb(133, 168, 202);
+    display: flex;
+    justify-content: center;
+    color: rgb(133, 168, 202);
+    font-size: 16px;
+    line-height: 35px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+    padding: 1%;
+    margin: 10px 20px;
+}
+.info-box2 {
+    width: 550px;
+    margin: 10px 20px;
+}
+       .info-box-left{
+           margin-right: 20px;
+           width: 40%;
+           height: 65%;
+       }
+       .info-box-right{
+           text-align: left; 
+       }
+       .school-name{
+           font-size: 93%;
+           font-weight: bold;
+       }
+       
+       @media screen and (max-width: 666px) {
+           .nav{
+               display: none;
+           }
+        
+.con {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.con img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+}
+.tab_head ul {
+    display: flex;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.tab_head span {
+    position: relative;
+    width: 100%;
+    line-height: 18px;
+    float: left;
+    list-style: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 0.8rem;
+}
+.title2 {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    color: #000000;
+}
+.line12 {
+    width: 2rem;
+    height: 1px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 0.7rem 0.1rem;
+}
+.yuan2 {
+    color: rgb(133, 168, 202);
+    border-radius: 25%;
+    width: 10px;
+    height: 10px;
+}
+.yuan22 {
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: small;
+    margin: 0.3rem 0.2rem 0 0.2rem;
+}
+.init-1, .init-2, .init-3 {
+    margin: 20px 20PX;
+    height: 100%;
+    overflow: hidden;
+    /* position: relative; */
+}
+.init-1-name {
+    width: 50px;
+    height: 22px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgb(133, 168, 202);
+    text-align: center;
+    margin-left: 0px;
+    border-radius: 5px;
+}
+
+.hr1 {
+    border: 1px solid rgb(133, 168, 202);
+    width: 97%;
+    height: 2px;
+    margin: 5px 0 20px 0;
+    /* margin-left: 25px; */
+}
+.hr2 {
+    border: 1px dashed rgb(133, 168, 202);
+    width: 98%;
+    height: 2px;
+    margin: 0 0 25px 0px;
+}
+.info-box {
+    width: 550px;
+    height: 250px;
+    border-radius: 8px;
+    border: 2px solid rgb(133, 168, 202);
+    display: flex;
+    justify-content: center;
+    color: rgb(133, 168, 202);
+    line-height: 30px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+    padding: 1%;
+    margin: 10px 1.4%;
+}
+
+
+.info-box-left {
+    margin-right: 10px;
+    width: 35%;
+    height: 150px;
+}
+.info-box-right {
+    text-align: left;
+    font-size: 13px;
+}
+.school-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn1 {
+    font-size: 16px;
+    color: rgb(133, 168, 202);
+    line-height: 30px;
+    margin: 1px auto;
+    border: 0;
+    background-color: #ffffff;
+}
+.btn11 {
+    font-size: 16px;
+    color: rgb(133, 168, 202);
+    line-height: 30px;
+    margin: 1px auto;
+    border: 0;
+    background-color: #ffffff;
+}
+
+.img-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 10px 9px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+}
+.img-box2 {
+    width: 150px;
+    margin: 9px 10px;
+}
+.name {
+    text-align: center;
+    font-size: 1rem;
+    /* margin-left: 95px; */
+    line-height: 15px;
+    margin-top: 3%;
+    color: rgb(133, 168, 202);
+    position: relative;
+}
+.img-z {
+    position: absolute;
+    width: 70%px;
+    height: 15%;
+    z-index: 1200;
+    bottom: 8%;
+    left: -7px;
+    display: flex;
+}
+.img-name {
+    width: 80%;
+    height: 32px;
+    color: #ffffff;
+    /* line-height: 85px; */
+    position: absolute;
+    font-size: 0.5rem;
+    line-height: 35px;
+    z-index: 1200;
+    bottom: 8%;
+    text-align: left;
+}
+       }
+       /* @media screen and (min-width: 920px){
+    .info-box-left {
+    margin-right: 20px;
+    width: 40%;
+    height: 50%;
+}
+.info-box {
+    width: 248px;
+    height: 268px;
+    border-radius: 8px;
+    border: 2px solid rgb(133, 168, 202);
+    display: flex;
+    justify-content: center;
+    color: rgb(133, 168, 202);
+    font-size: 16%;
+    line-height: 20px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+    padding: 1%;
+    margin: 10px 1.2%;
+}
+.school-name {
+    font-size: 14px;
+    font-weight: bold;
+} 
+       }*/
+/* @media screen and (min-width: 557px){
+.info-box {
+    width: 248px;
+    height: 268px;
+    border-radius: 8px;
+    border: 2px solid rgb(133, 168, 202);
+    display: flex;
+    justify-content: center;
+    color: rgb(133, 168, 202);
+    line-height: 30px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+    padding: 1%;
+    margin: 10px 1.2%;
+}
+.img-box {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    border-radius: 25px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 20px 21px;
+    box-shadow: 0 0 4px 4px #e2e1e1;
+}
+.img-name {
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    line-height: 85px;
+    position: absolute;
+    font-size: 1rem;
+    line-height:55px;
+    z-index: 1200;
+    bottom: 8%;
+    text-align: left;
+}
+}  */
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+    <!-- 图片 -->
+    <div class="con">
+        <img class="img" src="img/offer/top1.png" alt="">
+    </div>
+	<div class="tab_head"> 
+		<ul>
+			<li id="tab1" data-season="1" class="tab-s1 active"><span >录取战绩</span></li>
+			<li id="tab2" data-season="2"><span >offer墙</span></li>
+		</ul>
+    </div>
+    <div class="tab_content">
+      <div id="content_1" class="init show">
+        <div class="til">
+            <p class="title2">录取战绩</p>
+                <div class="line2">
+                    <div class="line12"></div> 
+                    <p class="yuan2">●</p>
+                    <em class="yuan22">●</em>
+                    <p class="yuan2">●</p>
+                    <div class="line12"></div> 
+                </div>
+        </div>
+        <div id="init-1" style="text-align: center;">
+            <div  class="init-1">
+                <p class="init-1-name">商 科</p>
+                <hr class="hr1" />
+                <div id="init_info1" class="init-info1">
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/普林斯顿大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">普林斯顿大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>俞同学 海本 经济+数学</p>
+                            <p>GPA3.82 GRE331</p>
+                            <p> 其他录取：杜克大学MQM、芝加哥大学Analytics、哥伦比亚大学BA</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/宾夕法尼亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">宾夕法尼亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>杨同学 211财经 金融</p>
+                            <p>GPA3.61 TOEFL115 GMAT760</p>
+                            <p> 其他录取：杜克大学
+                                MQM、华盛顿大学圣路易
+                                斯分校MSF罗彻斯特大学
+                                MSF</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/宾夕法尼亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">宾夕法尼亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>杨同学 211财经 金融</p>
+                            <p>GPA3.61 TOEFL115 GMAT760</p>
+                            <p> 其他录取：杜克大学
+                                MQM、华盛顿大学圣路易
+                                斯分校MSF罗彻斯特大学
+                                MSF</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/杜克大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">杜克大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>卢同学 211财经 金融</p>
+                            <p>GPA3.28 TOEFL106 
+                                GMAT730</p>
+                            <p> 其他录取：南加州大学MSF香
+                                港大学MSF、加州大学圣地亚
+                                哥分校MSF、华盛顿大学圣路
+                                易斯分校MSF、波士顿学院
+                                MSF等</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/杜克大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">杜克大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>叶同学 211财经 金融</p>
+                            <p>GPA3.27 TOEFL106 
+                                GRE327</p>
+                            <p> 其他录取：罗彻斯特大学
+                                BA、东北大学CS</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/纽约大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">纽约大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>刘同学 211财经 外语</p>
+                            <p>GPA3.6 TOEFL108 
+                                GRE330</p>
+                            <p> 其他录取：华盛顿大学圣
+                                路易斯分校QF、罗彻斯特
+                                大学MSF、约翰霍普金斯
+                                大学MSF、波士顿学院
+                                MSF等</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/多伦多大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">多伦多大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>王同学 985 金融</p>
+                            <p>GPA3.92 TOEFL108 
+                                GMAT770</p>
+                            <p> 其他录取：杜克大学
+                                MQM、麦吉尔大学
+                                MMF 、加州大学圣地亚
+                                哥分校MSF等</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/伦敦政治经济学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦政治经济学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>谢同学 港中深 金融</p>
+                            <p>GPA3.59 IELTS7.5 
+                                GMAT710</p>
+                            <p> 其他录取：香港大学
+                                MAcc
+                                华威大学MSF、曼彻斯特
+                                大学MSF</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/伦敦政治经济学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦政治经济学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>汪同学 211财经 金融</p>
+                            <p>GPA4.0/5.0 IELTS8 
+                                GMAT760</p>
+                            <p> 其他录取：UCL MSF、
+                                香港大学MSF、香港中文
+                                大学MSF</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/弗吉尼亚大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">弗吉尼亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>姚同学 211财经 法学</p>
+                            <p>GPA3.4 TOEFL103 
+                                GMAT710</p>
+                            <p> 其他录取：纽约大学
+                                IMC、约翰霍普金斯大学
+                                MKT</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/伦敦政治经济学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦政治经济学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>王同学 211财经 会计</p>
+                            <p>GPA3.76 TOEFL100 
+                                GMAT730</p>
+                            <p> 其他录取：新加坡国立大
+                                学应用经济及MFE、Cass
+                                投资管理</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/香港科技大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦政治经济学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>曾同学 985 会计</p>
+                            <p>GPA3.8 TOEFL103 
+                                GMAT710</p>
+                            <p> 其他录取：伊利诺伊大学
+                                香槟分校MSA、罗彻斯特
+                                大学MSA</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/帝国理工学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">帝国理工学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>王同学</p>
+                            <p> GPA3.75 
+                                IELTS7.5 
+                                GMAT710
+                                2+2 商务英语</p>
+                            <p> 其他录取：爱丁堡大学
+                                MGT 、KCL MKT等</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/香港中文大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">香港中文大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>丁同学 985</p>
+                            <p>ACCA
+                                GPA90 IELTS7.5 
+                                GMAT740</p>
+                            <p> 其他录取：南洋理工大学
+                                MSA等</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/约翰霍普金斯大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">约翰霍普金斯大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>胡同学 海本 金融</p>
+                            <p>GPA5.35/7 GRE320</p>
+                            <p> 其他录取：范德堡大学
+                                塔夫茨大学经济学</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/西北大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">西北大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>丁同学 211 土木工程</p>
+                            <p>GPA2.9 TOEFL95 
+                                GRE313</p>
+                            <p> 其他录取：南加州大学工
+                                程管理
+                                纽约大学工程管理</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/伦敦国王学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦国王学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>刘同学 二本 金融</p>
+                            <p>GPA3.7 IELTS7</p>
+                            <p> 其他录取：爱丁堡大学
+                                Ecological Econom -
+                                ics、曼彻斯特大学Proj -
+                                ect Management</p>
+                        </div>
+                    </div>
+                    <div class="info-box2"></div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="btn">
+                <button id="btn1" class="btn1"> > 点击显示更多 < </button> 
+                <button id="btn11" class="btn11"> > 收起 < </button> 
+            </div>
+                <!-- <button id="btn1" class="btn1"> > 点击显示更多 < </button>  -->
+            <!--  -->
+                <hr class="hr2" />   
+        </div>
+        <div id="init-2" style="text-align: center;">
+            <div  class="init-2">
+                <p class="init-1-name">量化</p>
+                <hr class="hr1"/>
+                <div id="init_info2" class="init-info2">
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/加州大学伯克利分校.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">加州大学伯克利分校</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>陈同学 985 金融工程</p>
+                            <p>GPA3.5 TOEFL104 
+                                GRE324</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/新加坡国立大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">新加坡国立大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>桂同学 211财经 金融</p>
+                            <p>GPA3.52 IELTS7 
+                                GRE325</p>
+                            <p> 其他录取：南洋理工大学
+                                金融工程</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/南加州大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">南加州大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>张同学 港中深 统计学</p>
+                            <p>GPA3.3 TOEFL103 
+                                GRE3210</p>
+                            <p> 其他录取：乔治城大学数
+                                据科学
+                                加州大学圣地亚哥分校商
+                                业分析</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/哥伦比亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">哥伦比亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>胡同学 985 统计+计算机</p>
+                            <p>GPA3.8 TOEFL105 
+                                GRE324</p>
+                            <p> 其他录取：约翰霍普金斯
+                                大学应用数学与统计</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/哥伦比亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">哥伦比亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>林同学 211财经 数学</p>
+                            <p>GPA3.36 TOEFL105 
+                                GRE325</p>
+                            <p> 录其他取：杜克大学生
+                                统、约翰霍普金斯大学生
+                                统、密歇根大学安娜堡分
+                                校生统等</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/布朗大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">布朗大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>胡同学 985 计算机</p>
+                            <p>GPA3.5 TOEFL107 
+                                录其他取：莱斯大学计算机</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/多伦多大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">香港中文大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>岳同学 二本 计算机</p>
+                            <p>GPA3.31/5 IELTS6.5</p>
+                            <p> 其他录取：香港理工大学
+                                计算机</p>
+                        </div>
+                    </div>
+                    <div class="info-box2"></div>
+                </div>                
+            </div>
+            <div class="btn">
+                <button id="btn2" class="btn1"> > 点击显示更多 < </button> 
+                <button id="btn22" class="btn11"> > 收起 < </button> 
+            </div> 
+                <hr class="hr2"/>   
+                  <!--...........................................  -->
+        </div> 
+        <div id="init-3" style="text-align: center;">
+            <div class="init-3">
+                <p class="init-1-name">文科</p>
+                <hr class="hr1" />
+                <div id="init_info3"  class="init-info3">
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/牛津大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">牛津大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>浦同学 211语言 阿拉伯语</p>
+                            <p>GPA3.79 IELTS8</p>
+                            <p>其他录取：伦敦政治经济
+                                学 院</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/芝加哥大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">芝加哥大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>徐同学 海本 会计</p>
+                            <p>GPA3.88 GRE328</p>
+                            <p> 其他录取：宾夕法尼亚大
+                                学（$9,000奖学金）、杜
+                                克大学等</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/哥伦比亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">哥伦比亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>陶同学 海本 传媒</p>
+                            <p>GPA3.64 GRE327</p>
+                            <p> 其他录取:宾夕法尼亚大
+                                学、加州大学洛杉矶分
+                                校、杜克大学（$34,000
+                                奖学金）卡耐基梅隆大
+                                学、乔治城大学等</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/宾夕法尼亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">宾夕法尼亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>苏同学 985 英语</p>
+                            <p>GPA3.87 TOEFL105 
+                                GRE324</p>
+                            <p> 其他录取:哥伦比亚大学、
+                                纽约大学、范德堡大学</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/哥伦比亚大学.png" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">哥伦比亚大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>陈同学 双非 日语</p>
+                            <p>GPA3.66 TOEFL105 
+                                GRE318</p>
+                            <p> 其他录取：哥伦比亚大学
+                                （$3,000奖学金）纽约大
+                                学、华盛顿大学</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/南加州大学.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">南加州大学</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>陈同学 211语言 新闻</p>
+                            <p>GPA3.85 TOEFL107 
+                                GRE319 
+                            <p>他录取：华盛顿大学圣路易斯分、乔治华盛顿大学</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-box-left" src="img/offer/伦敦政治经济学院.jpg" alt="">
+                        <div class="info-box-right">
+                            <p class="school-name">伦敦政治经济学院</p>
+                            <hr style="border: 1px solid  rgb(133, 168, 202); width: 100%;height:1px;">
+                            <p>崔 同 学 To p 4 9 8 5 新 闻</p>
+                            <p>GPA3.58 IELTS 7</p>
+                        </div>
+                    </div>
+                    <div class="info-box2"></div>
+                </div>               
+            </div> 
+            
+            <div class="btn">
+                <button id="btn3" class="btn1"> > 点击显示更多 < </button> 
+                <button id="btn33" class="btn11"> > 收起 < </button> 
+            </div>
+                <hr class="hr2"  />   
+                <!-- .............................................. -->
+        </div>
+      </div>
+      <div id="content_2" class="init">
+          <div class="til">
+            <p class="title2">offer墙</p>
+                <div class="line2">
+                    <div class="line12"></div> 
+                    <p class="yuan2">●</p>
+                    <em class="yuan22">●</em>
+                    <p class="yuan2">●</p>
+                    <div class="line12"></div> 
+                </div>
+          </div>
+            <div id="info1" style="text-align: center;">
+              <div class="info1" > 
+                <p class="name">美国篇</p>
+                <div id="images" class="images">
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Duke MQM BA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Duke MQM BA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Boston College MSF.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Boston College MSF</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Boston University Economics.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Boston University Economics </p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/CMU MIS Global.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">CMU MIS Global</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Columbia AA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Columbia AA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/UIUC MSPE.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">UIUC MSPE</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Duke MQM BA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Duke MQM BA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Florida International Business.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Florida International Business</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer//Georgetown MA Communication.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Georgetown MA Communication</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/UCSD MSF.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">UCSD MSF</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Princeton University MSF.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Princeton University MSF</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/UR Mkt Analytics.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">UR Mkt Analytics</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/University of Chicago Analytics.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">University of Chicago Analytics</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/JHU BA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">JHU BA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/UC Davis MSBA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">UC Davis MSBA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/WUSTL BA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">WUSTL BA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/USC MSBA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">USC MSBA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/USC MSc Finance.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">USC MSc Finance</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/University of Columbia DS.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">University of Columbia DS</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/University of Pennsylvania IMPA.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">University of Pennsylvania IMPAA</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/University of Rochester MSF.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">University of Rochester MSF</p>
+                    </img>
+                </div>
+                <div class="img-box">
+                    <img class="b-img" src="img/offer/Vanderbilt LLM.jpg" alt="">
+                        <img class="img-z" src="./img/offer/offerfinal-1.png" alt=""/>
+                        <p class="img-name">Vanderbilt LLM</p>
+                    </img>
+                </div>
+                <div class="img-box2"></div>
+                <div class="img-box2"></div>
+                <div class="img-box2"></div>
+                </div>
+              </div> 
+              <div class="btn">
+                <button id="btn4" class="btn1"> > 点击显示更多 < </button> 
+                <button id="btn44" class="btn11"> > 收起 < </button> 
+            </div>
+              <hr class="hr2" />
+            </div>
+            <!--  -->
+            <div id="info2"  style="text-align: center;">
+              <div class="info2" > 
+                <p class="name">英港新篇</p>
+                 <div id="images2" class="images2">
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/IC Investment&Wealth mgt.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">IC Investment&Wealth mgt</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/IC MSFA.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">IC MSFA</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/Leeds Communication&Media.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">Leeds Communication&Media</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NTU MSF.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NTU MSF</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/Warwick Business&Finance.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">Warwick Business&Finance</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/LSE Accounting&Finance.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">LSE Accounting&Finance</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/CUHK MIS.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">CUHK MIS</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/HKU Accounting.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">HKU Accounting</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/HKUST Big Data Tech.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">HKUST Big Data Tech</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/KCL Digital Marketing.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">KCL Digital Marketing</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NUS MSF.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NUS MSF</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/LSE Management.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">LSE Management</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NTU BA.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NTU BA</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NUS Financial Engineering.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NUS Financial Engineering</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NUS MSF2.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NUS MSF</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/KCL Accounting.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">KCL Accounting</p>
+                        </img>
+                    </div>
+                    
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/UCL Banking&Finance.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">UCL Banking&Finance</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/University of Oxford MMES.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">University of Oxford MMES</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NYU Integrated Marketing.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NYU Integrated Marketing</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/NYU Mathematics Finance.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">NYU Mathematics Finance</p>
+                        </img>
+                    </div>
+                    <div class="img-box">
+                        <img class="b-img" src="img/offer/HKUST MIS.jpg" alt="">
+                            <img class="img-z" src="./img/offer/offer1.png" alt=""/>
+                            <p class="img-name">HKUST MIS</p>
+                        </img>
+                    </div>
+                    <div class="img-box2"></div>
+                    <div class="img-box2"></div>
+                    <div class="img-box2"></div>
+                    <div class="img-box2"></div>
+                </div>
+              </div>
+              <div class="btn">
+                <button id="btn5" class="btn1"> > 点击显示更多 < </button> 
+                <button id="btn55" class="btn11"> > 收起 < </button> 
+            </div>
+            </div>   
+        </div>    
+    </div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#tab1,#tab2").click(function() {
+			//获取标签页代号
+			var num = $.trim($(this).attr("data-season"));
+			//删除兄弟元素的 active 类样式
+			$("#tab"+num).siblings().removeClass("active");
+			$("#tab"+num).addClass("active");
+			$("#content_"+num).siblings().removeClass("show");
+			$("#content_"+num).addClass("show");
+        });
+	})
+    // ///////////////////////////////////////////////////////////////////////
+    // 1
+     window.onload = function(){
+     var open = document.getElementById("btn1");//展开操作详情按钮 
+	 var close = document.getElementById("btn11");//关闭操作详情按钮
+    
+    var open1 = document.getElementById("btn2");//展开操作详情按钮 
+	var close1 = document.getElementById("btn22");//关闭操作详情按钮
+
+    var open2 = document.getElementById("btn3");//展开操作详情按钮 
+	var close2 = document.getElementById("btn33");//关闭操作详情按钮
+    // offer
+    var open3 = document.getElementById("btn4");//展开操作详情按钮 
+	var close3 = document.getElementById("btn44");//关闭操作详情按钮
+
+    var open4= document.getElementById("btn5");//展开操作详情按钮 
+	var close4 = document.getElementById("btn55");//关闭操作详情按钮
+    //1
+	open.onclick = function(){
+		init_info1.style.height = "100%";
+		close.style.display = "block";
+		open.style.display = "none";
+	};
+	close.onclick = function(){
+		init_info1.style.height = "750px";
+		close.style.display = "none";
+		open.style.display = "block";
+	};
+    //2
+	open1.onclick = function(){
+		init_info2.style.height = "100%";
+		close1.style.display = "block";
+		open1.style.display = "none";
+	};
+	close1.onclick = function(){
+		init_info2.style.height = "750px";
+		close1.style.display = "none";
+		open1.style.display = "block";
+	};
+    // 3
+    open2.onclick = function(){
+		init_info3.style.height = "100%";
+		close2.style.display = "block";
+		open2.style.display = "none";
+	};
+	close2.onclick = function(){
+		init_info3.style.height = "750px";
+		close2.style.display = "none";
+		open2.style.display = "block";
+	};
+    // offer
+    open3.onclick = function(){
+		images.style.height = "100%";
+		close3.style.display = "block";
+		open3.style.display = "none";
+	};
+	close3.onclick = function(){
+		images.style.height = "1350px";
+		close3.style.display = "none";
+		open3.style.display = "block";
+	};
+    // offer2
+    open4.onclick = function(){
+		images2.style.height = "100%";
+		close4.style.display = "block";
+		open4.style.display = "none";
+	};
+	close4.onclick = function(){
+		images2.style.height = "1350px";
+		close4.style.display = "none";
+		open4.style.display = "block";
+	};
+    };
+    
+  
+</script>
+</html>

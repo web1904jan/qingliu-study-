@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <title>清流教育</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .hea{
+        position: fixed;
+        z-index: 10;
+        margin-top: -102px;
+    }
+    .foo{
+		height: 470px;
+	}
+    .con {
+        margin-top: 103px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .con img{
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+    }
+    .tab_head ul{
+    display: flex;
+    text-align: center;
+    margin: 20px 0;
+}
+.tab_head ul li{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head ul .show{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head span{
+    position: relative;
+	width: 100%;
+	line-height: 30px;
+	float: left;
+	list-style: none;
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 18px;
+}
+.tab-s1{
+    border-right: 2px solid #999999;
+    border-left: 2px solid #999999;
+}
+.tab-s2{
+    border-right: 2px solid #999999;
+}
+       .text{
+            margin-top: 30px;
+            height: 150px;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            line-height: 50px;
+        }
+    /*  */
+     .item {
+           
+            clear: both;
+            width: 100%;
+            height: 100%;
+            display: none;
+            overflow: hidden;
+            position: relative;
+    }	
+    .show{
+	display: block;
+    }			
+    .item.active {
+            display: block;
+    }
+    /* ///////////////////////////////////// */
+    .title{
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+        }
+        /*  */
+       .line{
+           display: flex;
+           justify-content: center;
+       }
+       .line1{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            font-family:"Simsun";
+            font-style:normal;
+            font-size: large;
+       }
+       .yuan{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 3px 10px;
+       }
+       .init{
+           padding: 0 30px;
+       }
+       /*  */
+    .tab-item1-c{
+            width: 90%;
+            height: 250px;
+            margin:auto;
+            border-top: 1px dashed rgb(133, 168, 202);
+            border-bottom: 1px dashed rgb(133, 168, 202);
+            margin-top: 30px;
+            padding: 15px 0;
+            display: flex;
+            justify-content:space-between;
+        }
+        .c-left{
+            width: 80%;
+            font-size: 18px;
+            line-height: 30px;
+           text-align: justify;text-justify:inter-ideograph;
+       
+        }
+        
+        .c-left  a{
+           text-decoration: none;
+           color: rgb(133, 168, 202);
+        }
+        .c-left a em{
+            font-family:"Simsun";
+            font-style:normal;
+            font-size: 16px;
+           margin-right: 10px;
+        }
+        .c-left p{
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .c-left a span{
+            font-size: 24px;
+        }
+        .north2{
+            color: rgb(133, 168, 202);
+            font-size: 30px;
+            font-family:"Simsun";
+            font-style:normal;
+        }
+        .c-right{
+            width:300px;
+            height:220px;
+            display: flex;
+            
+            border-left: 1px dashed rgb(133, 168, 202);
+        }
+        .c-right img{
+            width:220px;
+            height:220px;
+            margin-left: 30px;
+            
+        }
+        .foot-btn{
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .btn{
+            width: 30px;
+            height: 40px;
+            /* text-align: center; */
+            border: 0px solid transparent;
+            border-bottom: 2px solid rgb(133, 168, 202) ;
+            padding: 0 0 10px 0;
+            margin: 0 30px;
+            background-color: #ffffff;
+            outline: none;
+            /* border:none; */
+        }
+        .btn p{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 26px;
+            background-color:rgb(133, 168, 202) ;
+            color: #ffffff;
+        }
+        .btn:active::after{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 26px;
+            background-color: #ffffff;
+            border: 2px solid  rgb(133, 168, 202) ;
+            color: rgb(133, 168, 202);
+        }
+        /* .btn:active::after{
+            content:"";
+        } */
+        .input{
+            display: flex;
+            justify-self: start;
+        }
+        .input input{
+            width: 30px;
+            height: 30px;
+            margin:0 10px;
+            border: 2px solid rgb(133, 168, 202) ;
+            font-size: 20px;
+        }
+        .btn2{
+            width: 60px;
+            height:30px;
+            margin:0 10px;
+            border: 2px solid rgb(133, 168, 202) ;
+            background-color:rgb(133, 168, 202) ;
+            color: #ffffff;
+            font-size: 16px;
+            position: relative;
+        }
+        @media screen and (max-width:895px) and (min-width:666px){
+            .c-left a span {
+    font-size: 20px;
+}
+            .c-left p {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+        }
+        /* ..................................................... */
+        @media screen and (max-width:666px){
+            
+            .con {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.con img{
+    margin-top: 0;
+}
+.tab_head ul {
+    display: flex;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.tab_head span {
+    position: relative;
+    width: 100%;
+    line-height: 18px;
+    float: left;
+    list-style: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 0.6rem;
+}
+.text {
+    margin: 10px 0;
+    height: 57px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 22px;
+}
+.title {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    color: #000000;
+}
+.line{
+    display: none;
+}
+.line1 {
+    display: none;
+    width: 2rem;
+    height: 1px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 0.7rem 0.1rem;
+}
+.yuan {
+    color: rgb(133, 168, 202);
+    border-radius: 25%;
+    width: 10px;
+    height: 10px;
+}
+.yuan2 {
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: small;
+    margin: 0.3rem 0.2rem 0 0.2rem;
+}
+.init {
+    padding: 0 10px;
+}
+.tab-item1-c {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    border-top: 1px dashed rgb(133, 168, 202);
+    border-bottom: 1px dashed rgb(133, 168, 202);
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.c-left {
+    width: 90%;
+    height:100%;
+    font-size: 12px;
+    line-height: 22px;
+    border-right: 1px dashed rgb(133, 168, 202);
+    text-align: left;
+}
+.c-left a em {
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: 12px;
+    /* margin-right: 0px; */
+}
+.c-left a span {
+    font-size: 14p;
+    font-size: 14px;
+}
+.c-left p {
+    margin-left: 10px;
+    font-size: 12px;
+}
+.north2 {
+    color: rgb(133, 168, 202);
+    font-size: 14px;
+    font-family: "Simsun";
+    font-style: normal;
+}
+.c-right {
+    width: 150px;
+    height:100%;
+    display: flex; 
+}
+.c-right img {
+    width: 100px;
+    height: 100px;
+    margin: 25% 0 10px 10px;
+}
+.foot-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.btn p {
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    font-size: 12px;
+    background-color: rgb(133, 168, 202);
+    color: #ffffff;
+}
+.btn {
+    width: 15px;
+    height: 30px;
+    /* text-align: center; */
+    border: 0px solid transparent;
+    border-bottom: 1px solid rgb(133, 168, 202);
+    padding: 0 0 0px 0;
+    margin: 10px;
+    background-color: #ffffff;
+    outline: none;
+    /* border: none; */
+}
+.btn :active {
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 1px solid rgb(133, 168, 202);
+    color: rgb(133, 168, 202);
+}
+.active{
+    display: block;
+    background-color: #ffffff;
+    color: rgb(133, 168, 202);
+}
+.input {
+    display: flex;
+    justify-self: start;
+    font-size: 12px;
+    margin: 10px 0;
+}
+.input input {
+    width: 15px;
+    height: 15px;
+    margin: 6px;
+    border: 2px solid rgb(133, 168, 202);
+    font-size: 12px;
+}
+.btn2 {
+    width: 40px;
+    height: 20px;
+    margin: 3px;
+    border: 1px solid rgb(133, 168, 202);
+    background-color: rgb(133, 168, 202);
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 19px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    width: 100%;
+    height: 500px;
+    background: rgb(70, 72, 78);
+    padding: 10px 0;
+    position: relative;
+}
+
+footer ul {
+    margin-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer ul li {
+    float: left;
+    font-size: 12px;
+    color: white;
+    list-style: none;
+    padding: 2% 6%;
+}
+
+footer ul li span:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+footer ul li .circle {
+    float: left;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    margin-top: 13px;
+}
+
+footer ul li .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: white;
+}
+
+footer .fo_con {
+    clear: both;
+    color: white;
+    line-height: 26px;
+    text-align: center;
+}
+footer .fo_con  h1{
+    clear: both;
+    color: white;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+footer .ben {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: white;
+    bottom: -120px;
+    line-height: 30px;
+}
+
+footer .ben span {
+    float: right;
+    margin-right: 100px;
+}
+footer .wechat{
+    position: absolute;
+    right: 30%;
+    top:80%;
+}
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+    <!-- 图片 -->
+    <div class="con">
+        <img class="img" src="img/article/top.png" alt="">
+    </div>
+    <!-- 标题 -->
+	<div class="tab_head"> 
+		<ul>
+			<li id="tab1" data-season="1" class="active"><span >留学费用及就读体验</span></li>
+			<li id="tab2" data-season="2"><span class="tab-s1">留学考试及网申准备</span></li>
+            <li id="tab3" data-season="3"><span  class="tab-s2">关于留学 ，你需要知道的</span></li>
+            <li id="tab4" data-season="4"><span >认识清流</span></li>
+        </ul>
+        <div class="text">
+            <p>留学路漫漫，总是问题多多，挑战多多。</p>
+            <p>清流君知道刚准备留学申请时我们心中的茫然和忐忑，所以特此为大家准备了我们过去发布的文章目录。</p>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="tab_content">
+        <div id="content_1" class="item show ">
+            <div id="content_1" class="init show">
+                <p class="title">留学费用篇</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/6bHmzjmplTXrAEeZ6eA4lw">
+                            <em class="north">◆</em><span>英国伦敦读研费用-帝国理工</sapn>
+                        </a>
+                        <p><em class="north2">“</em>伦敦虽说是一个有钱人的天堂，但没有钱的学生也可以过得很开心~<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//1.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/vYbF12v1kt_HLdmg57usag">
+                            <em class="north">◆</em>
+                            <span>在美国读研一年要花多少钱？-杜克大学</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>获得offer之后，Duke这边会给你issue一个I20文件，<br>
+                            上面会写清楚你项目期间bill的总花费，<br>
+                            一般那个可以是cover整个项目的总平均花费。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//2.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/AfTdiIiwgTaZQw8J962Zbw">
+                            <em class="north">◆</em>
+                            <span>在纽约读研要花多少钱？-纽约哥伦比亚大学</sapn>
+                        </a>
+                        <p><em class="north2">“</em>纽约正是众多学生梦寐以求的求学之地。<br>
+                            借此机会也刚好和大家算算，我在纽约上学这段时间，到底花了多少钱。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//3.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/BnRHSdJOjOnkhmboD4JxAg">
+                            <em class="north">◆</em>
+                            <span>在华盛顿特区读研一年要花多少钱？-约翰霍普金斯</sapn>
+                        </a>
+                        <p><em class="north2">“</em>来美国读书第一件事就是先办银行卡，我办的是美国银行<br>
+                            （Bank of America）。当时的我没有办信用卡的意识，<br>
+                            其实如果可以的话还是办一张，尽早开始拥有美国的信用记录也是有好处的。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//4.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/Us9Ue2rJ4X72APAIPHFd0w">
+                            <em class="north">◆</em>
+                            <span>在香港读研一年要花多少钱？-香港科技大学</sapn>
+                        </a>
+                        <p><em class="north2">“</em>我不管是否有课，基本每天都会去学校的啦，<br>
+                            毕竟专业课难度在那，同专业的同学们也是天天泡图书馆。<br>
+                            每天往返的小巴费用大概在8HKD，也就是240HKD/月。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//5.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="content_2" class="item">
+            <div id="content_2" class="init">
+                <p class="title">就读体验篇</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/0sBNvVO8rLw0GJ4ab6Zx4A">
+                            <em class="north">◆</em><span>在罗彻斯特大学就读体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>Rochester虽说位于纽约州，实际上地理位置更靠近枫叶国，<br>
+                            距离纽约市还有六个小时车程（因此大家都会亲切地称其为“罗村”）。~<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//Rochester.png" alt=""></div>
+                </div>
+                <!--  -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/0sBNvVO8rLw0GJ4ab6Zx4A">
+                            <em class="north">◆</em><span>慕了！| 在世界顶尖的传媒学院就读是怎样的体验？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>清流导师 Cornella，托福109，中国传媒大学传媒系毕业，<br>
+                            研究生毕业于顶尖的南加州大学Annenberg新闻与传媒学院。<br>
+                            帮助学生斩获美英港名校传媒及市场营销专业众多offer ，目前于洛杉矶工作。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/南加州大学.png" alt=""></div>
+                </div>
+                <!--  -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/kEGYLr_FRsDWBa97z0M-4w">
+                            <em class="north">◆</em>
+                            <span>美国法学院LLM及JD求学历程</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>今日文章的作者是清流的Jeff老师，他为大家带来了内容详实的<br>
+                            留学美国法学方面J.D. 和LL.M.的相关内容，<br>
+                            为有志赴美学习法学的学生们提供了很好参考与建议。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/法学院LLM及JD求学历程.png" alt=""></div>
+                </div>
+                <!-- <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/4D5Eia9zq5COjtbNuypebA">
+                            <em class="north">◆</em>
+                            <span>英港留学体验有何不同？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>纽约正是众多学生梦寐以求的求学之地。<br>
+                            借此机会也刚好和大家算算，我在纽约上学这段时间，到底花了多少钱。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//3.jpg" alt=""></div>
+                </div> -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/Plf4YISYhj9VxosGOWSRvw">
+                            <em class="north">◆</em>
+                            <span>在LSE（伦敦政经）就读是怎样的体验？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>清流导师Qiuyao，伦敦政治经济学院国际管理硕士，<br>
+                            本科毕业于中山大学经济学系，任职于某国民短视频科技公司商业分析。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/在LSE就读是怎样一番体验.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/ObMIRjmnPiX0mOv7mEepaw">
+                            <em class="north">◆</em>
+                            <span>哥大运筹学就读体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>清流导师Michael硕士毕业于哥伦比亚大学运筹学，GRE331，<br>
+                            曾同时斩获包括芝加哥大学金融数学、杜克经济学、LSE经济学、<br>
+                            UCL金融数学等众多牛校offer。目前任职于国内顶尖IBD。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/哥大读运筹学是一种怎样的体验.png" alt=""></div>
+                </div> 
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/HqkZ4IO-5ZvrWrq1BGB5KQ">
+                            <em class="north">◆</em>
+                            <span>香港top2读金融是怎样的体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>“ 港 三 ” 中 的 To p 2 ， 来 自 香 港 大 学 和 香 港 科 技 大 学 的 清 流 导 师 ，<br>
+                            写下了他们在香港的所学所见和所闻，<br>
+                            希望对有意去香港展开学习生活的你有所启发！<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/香港Top2读金融.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/RqYIXSgY96t6Ep3d09C7hA">
+                            <em class="north">◆</em>
+                            <span>G5就读体验-帝国理工大学</sapn>
+                        </a>
+                        <p><em class="north2">“</em>清流导师Chanson我们分享在帝国理工及伦敦的学习、<br>
+                            生活经历。如果IC也是你的梦校，MFE也是你的理想，<br>
+                            那让我们一起来认识IC，认识Chanson！。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/G5.png" alt=""></div>
+                </div>
+                <!-- <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/5Fcys7RKLxH_w2kNjXsUeA">
+                            <em class="north">◆</em>
+                            <span>美国顶尖商学院—杜克Fuqua就读体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>我不管是否有课，基本每天都会去学校的啦，<br>
+                            毕竟专业课难度在那，同专业的同学们也是天天泡图书馆。<br>
+                            每天往返的小巴费用大概在8HKD，也就是240HKD/月。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//5.png" alt=""></div>
+                </div> -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/2vc5_AyFfeBH0WdKRx1VlQ">
+                            <em class="north">◆</em>
+                            <span>哥大只招两个人的专业</sapn>
+                        </a>
+                        <p><em class="north2">“</em>作为清流的学生，当年她更是写下了收到哥大offer后，<br>
+                            我觉得清流的老师都有超能力！拿到offer的她欣喜万分，<br>
+                            她说：“当时如果没有选择清流，如果没有清流导师们，我一定做不到。”<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/哥伦比亚大学.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/1YK7gbjb6pztE6dwoFWZsQ">
+                            <em class="north">◆</em>
+                            <span>5000字干货 | 我在波士顿大学读金数</sapn>
+                        </a>
+                        <p><em class="north2">“</em>最最重要的是，那几个月每天固定时间的口语培训极大地提升了我的交流能力，<br>
+                            也为自己尽快地融入美国社会搭建了桥梁。直到现在，<br>
+                            我依然非常感激那段时间Jasper的帮助。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/波士顿大学.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/S8XE_l3WFssOfgFLqZXHKA">
+                            <em class="north">◆</em>
+                            <span>在港科大读国际管理硕士体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>出国留学这一年带给我的，已远远不止书本的知识和学术能力的提升。<br>
+                            人脉的建立、视野的开阔、聊天的谈资，无不一次次的印证，<br>
+                            如果能在本科毕业的时候出去看看，就一定要去一次。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/香港科技大学.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/ftQ09cUNp06Dix2MOOiEHg">
+                            <em class="north">◆</em>
+                            <span>Rochester读金融硕士体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>最后在收到的6个offer中我选择了Rochester的MSF项目，<br>
+                            当时也在其他项目中纠结过，而确定下来的原因，<br>
+                            下面就来用这一年的经历为大家阐述吧～。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/罗切斯特大学.png" alt=""></div>
+                </div>
+                <!-- <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/ETlKj5lcPqzzS-FK2P0pUA">
+                            <em class="north">◆</em>
+                            <span>UCSD读金融硕士体验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>我不管是否有课，基本每天都会去学校的啦，<br>
+                            毕竟专业课难度在那，同专业的同学们也是天天泡图书馆。<br>
+                            每天往返的小巴费用大概在8HKD，也就是240HKD/月。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//5.png" alt=""></div>
+                </div> -->
+            </div>
+        </div>
+        <div id="content_3" class="item">
+            <div id="content_3" class="init">
+                <p class="title">留学考试网申篇</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/0sBNvVO8rLw0GJ4ab6Zx4A">
+                            <em class="north">◆</em><span>干货 | 认可度超高的PTE考试是个啥？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>P T E 的 全 称 是 Pe a r s o n Te s t of E n g l i s h A c a d e m i c ，<br>
+                            简称PTE Academic，也称培生学术英语考试。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/pte.png" alt=""></div>
+                </div>
+                <!--  -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/0sBNvVO8rLw0GJ4ab6Zx4A">
+                            <em class="north">◆</em><span>雅思考试报名2019.9.7</sapn>
+                        </a>
+                        <p><em class="north2">“</em>雅思或者托福，是我们在出国留学申请大部分院校都必须要有的语言成绩。<br>
+                            对于想要从国内前往英国、香港、澳洲等地区留学的同学（对比托福适用于前往<br>
+                            北美留学，不过雅思成绩也是可以申请美国高校的哦，和托福没有太大区别），<br>
+                            雅思是必须要过的一关。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/雅思.png" alt=""></div>
+                </div>
+                <!--  -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/kEGYLr_FRsDWBa97z0M-4w">
+                            <em class="north">◆</em>
+                            <span>最新攻略 | 雅思成绩送分，step by step详解来啦！</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>留学申请，语言成绩必不可少。但别以为考完之后就万事大吉啦，<br>
+                            我们还需要让雅思官方给你要申请的学校寄送成绩。<br>
+                            下面就是我们精心整理的雅思送分攻略，“送分难”的宝宝们请收好！<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/雅思送分.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/Plf4YISYhj9VxosGOWSRvw">
+                            <em class="north">◆</em>
+                            <span>一篇搞定 | 2019年全新WES认证流程</sapn>
+                        </a>
+                        <p><em class="north2">“</em>WES全称是World Education Service，<br>
+                            是北美的一家资质评估机构，可以帮助想在美国或加拿大留学的你<br>
+                            提供本科成绩认证及学历认证。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/WES.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/ObMIRjmnPiX0mOv7mEepaw">
+                            <em class="north">◆</em>
+                            <span>留学申请推荐信，其实并不难</sapn>
+                        </a>
+                        <p><em class="north2">“</em>推荐信（Recommendation/Reference Letter）顾名思义，<br>
+                            是推荐人写的介绍申请人背景的信件，<br>
+                            与PS、resume和essays共同组成了“申请文书”。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article//5.png" alt=""></div>
+                </div> 
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/HqkZ4IO-5ZvrWrq1BGB5KQ">
+                            <em class="north">◆</em>
+                            <span>留学申请推荐信，其实并不难</sapn>
+                        </a>
+                        <p><em class="north2">“</em>推荐信（Recommendation/Reference Letter）顾名思义，<br>
+                            是推荐人写的介绍申请人背景的信件，<br>
+                            与PS、resume和essays共同组成了“申请文书”。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/推荐信.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/RqYIXSgY96t6Ep3d09C7hA">
+                            <em class="north">◆</em>
+                            <span>托福大改？最全信息在这里</sapn>
+                        </a>
+                        <p><em class="north2">“</em>托福官方近期召开改革发布会，并对改革后的考试结构进行了阐释。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/托福大改.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/2vc5_AyFfeBH0WdKRx1VlQ">
+                            <em class="north">◆</em>
+                            <span>香港留学签证办理流程全解析</sapn>
+                        </a>
+                        <p><em class="north2">“</em>拿到学校的offer后，一共要申请两个材料，分别是向学校申请学生签证及<br>
+                            向出入境管理处申请逗留签（如之前没有办理过港澳通行证则可以在<br>
+                            拿到签证后，同时办理港澳通行证及“逗留签注”）<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/香港签证.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/1YK7gbjb6pztE6dwoFWZsQ">
+                            <em class="north">◆</em>
+                            <span>托福网站更新了！变化有这些</sapn>
+                        </a>
+                        <p><em class="north2">“</em>更加直观简洁，方便小伙伴们查询考位，进行考试报名。<br>
+                            同时网站还提供了英语测试练习、备考资源等等，在首页就可以查找哦~<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/托福大改.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/S8XE_l3WFssOfgFLqZXHKA">
+                            <em class="north">◆</em>
+                            <span>申请准备资料checklist，请查收</sapn>
+                        </a>
+                        <p><em class="north2">“</em>这个不用说，想要出国的小伙伴们一定要提前准备。<br>
+                            有些学校（比如JHU）在网申中就会要求提交护照信息页的扫描件，<br>
+                            大家可以提前扫描存到电脑里。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/申请准备资料清单.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/ftQ09cUNp06Dix2MOOiEHg">
+                            <em class="north">◆</em>
+                            <span>5分钟入门雅思</sapn>
+                        </a>
+                        <p><em class="north2">“</em>雅思考试分为听、说、读、写四个单项，其中听、读、写采用考卷作答，<br>
+                            而口语采用考官面试形式。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/5分钟入门雅思.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="content_5" class="item">
+            <div id="content_1" class="init show">
+                <p class="title">留学考试及网申篇</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/1l1PwLOLOItg8vmoQnZ42w">
+                            <em class="north">◆</em><span>5分钟快速入门托福</sapn>
+                        </a>
+                        <p><em class="north2">“</em>更高的托福分数证明了你更有可能快速适应美国的学习生活，<br>
+                            也有较大可能会获得比较好的performance，学校会更加有意愿录取你。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/五分钟快速入门托福.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484309&idx=1&sn=230120698689945a52a06054dbbcd34d&chksm=eae3c6d4dd944fc29f5cea9c276a0c1809158b5ba8a8222a6d6ba41c0eb4cffecb9fde6f2954&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>GMAT4.16改革，究竟哪里变了？</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>自2018年4月16日起，GMAT的考试时间将会整体减少30分钟。也就是说，<br>
+                            包括中间休息和开头的考试指导在内，总时间将会从原来的4小时减至3.5小时。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/GMAT.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483878&idx=1&sn=8a1dfcf451ebeb8523ac9345ce0d81ba&chksm=eae3c4a7dd944db15c08c3c4cb10b3e5360eaf64a23d139797e9ddc5490f7d8fae5d2f34a1cf&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>邮件勾搭招生小秘的正确方式！</sapn>
+                        </a>
+                        <p><em class="north2">“</em>在申请学校的过程中，官网展示的信息往往有限，<br>
+                            而政策又可能瞬息万变，如何学会通过直接与招生委员会的小秘们沟通<br>
+                            是一门技巧，在极端的情况下甚至可能帮助提高你的录取几率。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/邮件勾搭招生小秘.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483871&idx=1&sn=b1d180cf7a3a3aa8c9c620109e49b951&chksm=eae3c49edd944d8853d761cafcf6e13dffc3e9bdeff4ef363999363683379f2f20a848d65684&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>GMAT770大神备考经验</sapn>
+                        </a>
+                        <p><em class="north2">“</em>作为管理学研究生入学考试，GMAT是几乎每一个上课申请者必须的考试。<br>
+                            考试总时长约三个半小时，内容分别涉及<br>
+                            AWA、IR、Quantitative和Verbal。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/轻松.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247485253&idx=1&sn=3289fc7cfc6b65829af0120500f57e29&chksm=eae3c204dd944b1237d86fa4d1cfe5c7e03def13adf0bd221fdab98e461f40b2efd5574bb015&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>留学申请推荐信，其实并不难</sapn>
+                        </a>
+                        <p><em class="north2">“</em>推荐信（Recommendation/Reference Letter）顾名思义，<br>
+                            是推荐人写的介绍申请人背景的信件，<br>
+                            与PS、resume和essays共同组成了“申请文书”。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/不难.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483863&idx=1&sn=dadb2691d591977a4e26898963f7b190&chksm=eae3c496dd944d8061e1ba3d7be3fdd9643d745ea89aa669b6049015f98e55f613607b7398db&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>经验谈 | GRE330？掌握这些就够了</sapn>
+                        </a>
+                        <p><em class="north2">“</em>GRE其实并不难，对于一般学生来说，掌握出题思路+单词就可以搞定，<br>
+                            细心细心再细心就可以搞定。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419204055.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483860&idx=1&sn=fad10e2ca45a6eedb42a16fad7531caf&chksm=eae3c495dd944d838926a64a68ff54a559d5f96615f24c551cfbd1413b60809ce33acddb2012&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>干货 | 114分大神带你玩转托福</sapn>
+                        </a>
+                        <p><em class="north2">“</em>这一期向大家介绍一些我自己接触TOEFL 8年来积累的一些经验<br>
+                            ，这8年中我共考了3次T，成绩分别是105、109和114，之后因为加入清流<br>
+                            ，也解答了不少相关问题，因此也算是和T有些缘分。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/玩转托福.png" alt=""></div>
+                </div>
+            </div>
+            <div id="content_1" class="init show">
+                <p class="title">关于留学你需要知道的</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247485514&idx=1&sn=9ae4585a3d55ee17cc884c44f0d4254f&chksm=eae3cd0bdd94441dafe1cc654f7a7fdc436c5dd581c3f7872725ff82bd3a8eb49ca0f98525e9&scene=21#wechat_redirect">
+                            <em class="north">◆</em><span>考研vs留学 | 名校海归找工作不如211？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>那么究竟留学还是考研？还没走上社会的学生该把未来交给哪条路？<br>
+                            今天我们不讲故事，就用数据和事实来给大家还原一些真相，<br>
+                            帮助你理清思路，做出最适合自己的选择。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/考研留学.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247485453&idx=1&sn=7e268f7ecd37900e853de621018947aa&chksm=eae3cd4cdd94445a2b84caa0a17a69aa0249e0a1b70889eb2655bec446b83f07b1dd468fd84a&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>赴英留学竞争白热化，2019年申请人数激增30%</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>近日，英国大学招生服务中心（Universities and Colleges Admissions Service，<br>
+                            简称UCAS）公布了2019年英国大学最新申请数据。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/wkgB5_8766.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484976&idx=1&sn=bdb1ae6c93165cf2030bc075dbc2af62&chksm=eae3c371dd944a674bae55b9f6e6566d5c11c6f7b1876e4d080e6f2161ffe80b521373edd3d0&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>美国留学安全吗？赴美3年小姐姐现身说法</sapn>
+                        </a>
+                        <p><em class="north2">“</em>人们习惯用“犯罪率”来评判一个地区是否安全，在大多数人的概念里，<br>
+                            美国的犯罪率比中国搞多了，所以理所当然，美国的治安没有中国好，不安全<br>
+                            这里其实存在一个小的知识点：即美国的犯罪率和中国的犯罪率的统计方法是不同的。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/安全.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483931&idx=1&sn=60321c3f728b18c772b97c2d7076b6e0&chksm=eae3c75add944e4c0a84d5b83a38d7b7f73f6c27d01bd7da1c42a8958c02cc3ce77f664c53f9&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>创始人说，到底我们为什么要出国留学？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>经营清流约四载，直接间接带过的加上咨询过的学生早已破百人，<br>
+                            我能感受到大部分同学对留学的热血和激情，<br>
+                            但有时候却忽略了一小部分同学们的疑虑，出国留学的意义何在？<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/为什么.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="content_4" class="item">
+            <div id="content_1" class="init show">
+                <p class="title">关于清流</p>
+                <div class="line">
+                    <div class="line1"></div> 
+                    <p class="yuan">●</p>
+                    <em class="yuan2">●</em>
+                    <p class="yuan">●</p>
+                    <div class="line1"></div> 
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247485498&idx=1&sn=1b1db09f444cfd9993549c6e09bf99a0&chksm=eae3cd7bdd94446d3e5692ade5c395533bdae07642f86831c706c64937bd53cc1a59b75b4044&scene=21#wechat_redirect">
+                            <em class="north">◆</em><span>回信息最快的不一定是你是男朋友，而是清流老师！</sapn>
+                        </a>
+                        <p><em class="north2">“</em>清流就是看到了行业现状，才坚持要做一家有好服务+过硬文书的留学教育咨询公司，<br>
+                            给同学们带来实打实的服务，帮助同学们拿到能力范围内最理想的offer<br>
+                            （逆袭的也有很多哦！）<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/回消息.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484851&idx=1&sn=9ca238ca74cfdd57ba3118adc1c10cee&chksm=eae3c0f2dd9449e4e87e414acaaa27500387211b6fcb93d27996ceccc4c814441ce1e6c3bbc4&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>深耕6年，助你配齐offer</sapn>
+                        </a>
+                        <p> <em class="north2">“</em>自清流学生拿offer成功率达100%，99%以上学生都拿到了排名前50学校的offer，<br>
+                            收获offer总数量更是达到了惊人了700+。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419202022.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484992&idx=1&sn=2b994d3971c88d2dd24907b180e58b68&chksm=eae3c301dd944a179be89c2d1b6f566438c9c498c3623c383ca79ebb1423a1d9c4f23cc57184&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>101个心愿 | 清流教育2018年硕士留学申请白皮书</sapn>
+                        </a>
+                        <p><em class="north2">“</em>为了让更多学生及家长认识当前中国的留学大环境，<br>
+                            同时进一步了解清流2018年的服务情况，我们针对签约的101个清流学生<br>
+                            做了深层分析，供大家参考分析。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419202448.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484687&idx=1&sn=b20c42ccc5aa6acec88832939ec2091f&chksm=eae3c04edd944958156f24d1993066419268b6cfad319c89321723faad2fd9f5a2f40c105cb4&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>朋友圈的真话，清流到底怎么样</sapn>
+                        </a>
+                        <p><em class="north2">“</em>我们签约前什么样，签约后还是什么样，甚至据反映，签约后你会收到<br>
+                            我们更热情、更专业的服务！<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419213449.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484496&idx=1&sn=9dead0ba6c1b4f77fa5eff3e25373aad&chksm=eae3c111dd94480754222297430c32b21a50152bf72f8216cc95d45fd76bd488e809814ce3f5&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>清流学生写给妈妈的一封信......</sapn>
+                        </a>
+                        <p><em class="north2">“</em>为了说服妈妈，这位同学写了一篇长文，希望可以获得家长的支持，<br>
+                            并且摆脱那种深深的无力感。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419202252.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484303&idx=1&sn=150559b24f2e3cbf871f2dcb8f13edaf&chksm=eae3c6cedd944fd8873de6fb40154aaefe8c3cd550f7e2af0cd686867715a16aa056942c8867&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>见字如面，写给要去远方的你</sapn>
+                        </a>
+                        <p><em class="north2">“</em>很高兴你能在人生最好的年华里点开这封信，点开一个人生的可能，<br>
+                            我也想借这个机会跟你聊一聊我自己。我是你的专属留学专家，<br>
+                            是你追梦路上最值得信赖的朋友<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419202352.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484291&idx=1&sn=7634d0db34f9acf621a335e633686650&chksm=eae3c6c2dd944fd40fc65450af523e7a4ffc55e9cfc262e74e5a938468efa7ef24c03b8bf171&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>100+学生好评，是的我们就是留学界的清流！</sapn>
+                        </a>
+                        <p><em class="north2">“</em>我们坚信，实力一定会带来辉煌的成果，而来自学生的认可和信任，<br>
+                            将是我们最宝贵的财富。清流成立至今，已有超过100名学生选择了我们，<br>
+                            并最终获得了理想中的录取结果。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419204204.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247483817&idx=1&sn=b5599fc323faa79b5428caaf0e73ac38&chksm=eae3c4e8dd944dfef60d901cb7a9ed04e234feeb5857eda159da985c0791eb262bd0730cea05&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>清流 | 这些学霸们要做“有诚意的留学申请”！</sapn>
+                        </a>
+                        <p><em class="north2">“</em>国外大学普遍采取申请制，没有完全固定的录取标准，<br>
+                            录取委员会通过全局分析申请者的背景进行录取决策，<br>
+                            参考的背景主要包括以下几点：<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/DWAX2_5814.jpg" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484427&idx=1&sn=dfbd0f53b68cc1b62db2e90b579a5b7c&chksm=eae3c14add94485cce442468216c19558d4d20d69b4291f7817115d79148f73f6571d9833d43&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>昨天，一位大一学生和清流签约了</sapn>
+                        </a>
+                        <p><em class="north2">“</em>签约与否取决于文书团队的实力与工作态度，取决于留学机构在整个申请过程中的<br>
+                            服务质量，与学生自身的情况并无太大的关联。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419203554.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484352&idx=1&sn=7524642e86d296a4efcba2e3d3d44b58&chksm=eae3c681dd944f97e6be67b53a8c53b149af616f1307113de5f4a04b4fb6e8b4a1ad978e8f2b&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>犹豫两个月，99篇文稿，和杜克的故事</sapn>
+                        </a>
+                        <p><em class="north2">“</em>今天要介绍的王同学，她在两个月的犹豫和沟通后，最终决定信任清流。<br>
+                            申请过程中，我们用99篇文稿+春节无休的工作态度，换来了王同学梦校的offer。<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419203446.png" alt=""></div>
+                </div>
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI2OTI5MjU5MA==&mid=2247484342&idx=1&sn=41ff0aa14db37e7e5cefc457369b2b88&chksm=eae3c6f7dd944fe1c44b65fdb2805511dd0261bdb92ffd97baeaa791d9c4860c019a7ae351c8&scene=21#wechat_redirect">
+                            <em class="north">◆</em>
+                            <span>收到哥大offer，我觉得清流老师超有能力！</sapn>
+                        </a>
+                        <p><em class="north2">“</em>今天介绍的是收到dream school offer的清流学员郭同学，<br>
+                            她不断在感叹清流的神奇，感叹老师的优秀和耐心，才收获了如今超出预期的<br>
+                            好结果！让我们来看看她是怎么说的吧~<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419203847.png" alt=""></div>
+                </div>
+                <!-- 这个的链接没得 -->
+                <div class="tab-item1-c">
+                    <div class="c-left">
+                        <a href="https://mp.weixin.qq.com/s/Us9Ue2rJ4X72APAIPHFd0w">
+                            <em class="north">◆</em>
+                            <span>清流大8卦 | 留学海外，他们的期末到底有多疯狂？</sapn>
+                        </a>
+                        <p><em class="north2">“</em>你以为留学生们的日常就是买买买，去不同的城市旅行，<br>
+                            或者是吃着米其林餐厅拍美美的照片吗？NO！<br>
+                            留学生们为了变态的Final考试各个都是各显神通，熬秃了脑袋……<em class="north2">”</em></p>
+                    </div>
+                    <div class="c-right"><img src="./img/article/微信截图_20200419203332.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-btn">
+        <button class="btn active"><p>1</p></button>
+        <button class="btn"><p>2</p></button>
+        <button class="btn"><p>3</p></button>
+        <button class="btn"><p>4</p></button>
+        <button class="btn"><p>5</p></button>
+        <div class="input">
+            <p>跳转到<input id="pageNow" type="text">页</p>
+            <button  type="submit"  class="btn2">确定</button>
+        </div>
+        
+    </div>
+    <div class="dede_pages"><ul class=pagelist>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"listsize="5"/}</ul></div>
+    <iframe src="footer.html" frameborder="0" width="100%"  scrolling="no" class="foo"></iframe>
+</body>
+<script type="text/javascript">
+    $(function(){
+		$("#tab1,#tab2,#tab3,#tab4").click(function() {
+			//获取标签页代号
+			var num = $.trim($(this).attr("data-season"));
+			//删除兄弟元素的 active 类样式
+			$("#tab"+num).siblings().removeClass("active");
+			$("#tab"+num).addClass("active");
+			$("#content_"+num).siblings().removeClass("show");
+			$("#content_"+num).addClass("show");
+        })
+	});
+
+
+
+    
+    //封装函数、图片显示的部分、传入获取到的div，和被点击的序号
+    function toggle(eles, active) {
+        for(var i = eles.length; i--;) {
+            eles[i].className = "item"; //先让所有div隐藏
+        }
+        eles[active].className = "item active";//再让被点击的序号对应的div 显示
+    }
+    //获取按键和div
+    var aBtn = document.getElementsByClassName("btn");
+    var til=document.getElementById("tab1")
+    var aIem = document.getElementsByClassName("item");
+    var nowPage = 0; //定义当前页，默认值为0；
+        
+    for(var i = aBtn.length; i--;) {
+            aBtn[i].tab = i;
+            aBtn[i].onclick=function(){
+                toggle(aIem,this.tab);
+                nowPage=this.tab; //被点击后，保存当前页的序号
+            }
+    }
+    //跳转
+   
+
+
+
+</script>
+</html>

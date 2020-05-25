@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>清流教育</title>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/all.css">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family:"Microsoft YaHei";
+			}
+			.hea{
+				position: fixed;
+				z-index: 10;
+				margin-top: -102px;
+			}
+			.swiper-container{
+				margin-top: 103px;
+				/* width: 100%; */
+			}
+			.swiper-button-prev,.swiper-button-next{
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.swpter_box{
+				position: relative;
+				width: 100%;
+				height: 78px;
+				margin-top: -2.3%;
+				z-index: 10;
+			}
+			.swpter_box .swpter_con{
+				width: 25%;
+				height: 80%;
+				margin: 0 auto;
+				background: rgb(133,168,202);
+				border-radius: 20px;
+				color: white;
+				line-height: 60px;
+			}
+			.swpter_box .swpter_con h2{
+				text-align: center;
+			}
+			.swiper-slide img{
+			width: 100%;
+			height: 100%;
+			margin-top: 50px;
+			}
+			.concent{
+				width:100%;
+				height: 100%;
+				margin-top: -60px;
+				/* width: 100%; */
+				background: rgb(244,244,244);
+				padding: 50px ;
+			}
+			.concent .concent_box{
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				/* background: white; */
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				
+			}
+			.concent .concent_box .madan{
+				width: 446px;
+				height: 580px;
+				background-color: #ffffff;
+				/* flex: 1; */
+				margin: 30px 0px;
+				border: 1px solid gainsboro;
+				box-shadow:  0px 2px 6px #888888;
+			   position: relative;
+               transition:all .4s;
+               -moz-transition:all .4s;
+               -webkit-transition:all .4s;
+               -o-transition:all .4s;
+               text-align: center;
+			}
+
+			.concent_box .madan:hover{
+           transform:scale(1.1);
+		   z-index: 1000;
+       
+
+			}
+			.concent .concent_box .madan h1{
+				color: rgb(187,187,188);
+				text-align: center;
+				margin-top: 40px;
+				font-size: 45px;
+			}
+			.concent .concent_box .madan .one{
+                  display: block;
+				  position: absolute;
+                  width: 80%;
+                  height: 1px;
+				  margin-left: 40px;
+                 background: grey;
+          }
+			.concent .concent_box .madan span:nth-of-type(2){
+				display: block;
+				width: 80%;
+				height: 100%;
+				margin: 30px auto 0 auto;
+				line-height: 19px;
+				line-height: 35px;
+				text-align: justify;
+			}
+			.tow{
+				display: block;
+				width: 80%;
+				height: 100%;
+				margin: 30px auto 0 auto;
+				line-height: 19px;
+				line-height: 35px;
+				text-align: center !important;
+				
+			}
+			.concent .concent_box .madan h2{
+				color: rgb(96,96,96);
+				font-size: 35px;
+				font-weight: normal;
+				margin-top: 100px;
+				text-align: center;
+			}
+			/* .concent .concent_box .madan:hover{
+				animation: madan 1s;
+				animation-fill-mode : forwards;
+				background: white;
+			} */
+			.concent .concent_box .madan .btn {
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-align: center;
+    background: rgb(133,168,203);
+    /* line-height: 1px; */
+    /* border-radius: 10px; */
+    bottom: -20px;
+    margin-left: 140px;
+}
+
+			.concent .concent_box .madan .btn a{
+				text-decoration: none;	
+				text-align: center;
+			}
+			.concent_box .madan .btn span {
+    width: 100px;
+    height: 0;
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+	color: white;
+	margin-left: 25px;
+	line-height: 20px;
+}
+			.school {
+				width: 100%;
+				width: 100%;
+			}
+			.school .activity{
+				width: 100%;
+				text-align: center;
+				margin-top: 80px;
+				color: rgb(96,96,96);
+				font-size: 24px;
+			}
+			.school .activity span{
+				display: block;
+				width: 180px;
+				height: 2px;
+				background: rgb(133,168,203);
+				margin:10px auto;
+			}
+			.school .activity p{
+				color: darkgray;
+				margin-top: 10px;
+			}
+			.school .school_box{
+				margin: 50px 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.school .school_box .school_con{
+				width: 508px;
+				height: 670px;
+				border: 1px solid grey;
+				border-radius: 10px;
+				font-size: 24px;
+                /* font-family: ; */
+				margin: 20px 30px;
+				position: relative;
+			}
+			.school .school_box .school_con img{
+				width: 508px;
+				height: 400px;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+			.school .school_box .school_con .sc_btn{
+				position: relative;
+				width: 190px;
+				height: 54px;
+				background: rgb(133,168,203);
+				border-radius: 15px;
+				float: right;
+				right: 10px;
+				margin-top: -30px;
+				text-align: center;
+				line-height: 54px;
+				color: white;
+				font-size: 24px;
+			}
+						.school .school_box .school_con .sc_cen{
+				margin-top: 60px;
+				margin-left: 60px;
+			}
+			.school .school_box .school_con .sc_end{
+				position: absolute;
+				width: 508px;
+				height: 70px;
+				border-top: 1px solid grey;
+				margin-top: 0px;
+				text-align: center;
+				line-height: 70px;
+				bottom:0;
+			}
+			.foo{
+				height: 470px;
+			}
+			@media screen and (max-width:1900px) and (min-width:1220px){
+				.concent .concent_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* background: white; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 206px;
+    justify-content: center;
+}
+			}
+@media screen and (max-width:1421px) and (min-width:1009px){
+				.concent .concent_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* background: white; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    justify-content: center;
+}
+   
+}/*
+@media screen and (max-width:889px){
+	.concent{
+    width:100%;
+    margin-top: -100px;
+    width: 100%;
+    background: rgb(244,244,244);
+    padding: 120px 80px 0 80px;
+}
+    .concent .concent_box {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.concent .concent_box .madan h1 {
+    color: rgb(187,187,188);
+    text-align: center;
+    margin-top: 80px;
+    font-size: 150%;
+}
+.concent .concent_box .madan .btn {
+    width: 60%;
+    height: 6%;
+    cursor: pointer;
+    position: absolute;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-align: center;
+    background: rgb(133,168,203);
+    line-height: 55px;
+    bottom: -20px;
+    margin-left: 20%;
+}
+
+			} */ 
+/* @media screen and (min-width:667px){
+	.concent{
+    width:100%;
+    margin-top: -100px;
+    width: 100%;
+    background: rgb(244,244,244);
+    padding: 120px 80px 0 80px;
+}
+	.concent .concent_box{
+    width: 100%;
+    height: 660px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.concent .concent_box .madan{
+    flex: 0.5;
+    width:20%;
+    border: 1px solid gainsboro;
+    box-shadow:  0px 2px 6px #888888;
+} 
+			}
+			.concent .concent_box .madan .btn {
+    width: 60%;
+    height: 4%;
+    cursor: pointer;
+    position: absolute;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-align: center;
+    background: rgb(133,168,203);
+    line-height: 55px;
+    /* border-radius: 10px; */
+   /* bottom: -20px;
+    margin-left: 20%;
+} */
+			@media screen and (max-width:666px){
+.swiper-container{
+    margin-top: 50px;
+}
+.swiper-slide{
+    /* margin-top: -100px; */
+    display: block;
+}
+.swiper-slide img{
+    width: 100%;
+	height: 100%;
+	margin-top: 0;
+}
+.swiper-button-prev,.swiper-button-next{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.swpter_box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: -5.3%;
+    z-index: 10;
+}
+.swpter_box .swpter_con{
+    width: 43%;
+    height: 60%;
+    margin: 0 auto;
+    background: rgb(133,168,202);
+    border-radius: 5px;
+    color: white;
+    line-height: 30px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 16px;
+    text-transform: none!important;
+    letter-spacing: 0;
+    text-transform: none;
+	font-variant: initial;
+	margin: -32px 0 0 0;
+	
+}
+.swpter_box .swpter_con h2{
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+.concent {
+    width: 100%;
+    margin-top: -100px;
+    width: 100%;
+    background: rgb(244,244,244);
+    padding: 80px 0 0 0;
+}
+.concent .concent_box .madan {
+    width: 180px;
+    height: 333px;
+    background-color: #ffffff;
+    /* flex: 1; */
+    margin: 20px 0px;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 2px 6px #888888;
+    position: relative;
+    transition: all .4s;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    text-align: center;
+}
+.concent .concent_box .madan h1 {
+    color: rgb(187,187,188);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.concent .concent_box .madan .one {
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    margin-left: 20px;
+    background: grey;
+}
+.concent .concent_box .madan h2 {
+    color: rgb(96,96,96);
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+    text-align: center;
+}
+.concent .concent_box .madan span:nth-of-type(2) {
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: 5px auto 0 auto;
+    /* line-height: 19px; */
+    /* line-height: 12px; */
+    line-height: 19px;
+    font-size: 0.6rem;
+    text-align: justify;
+}
+.concent .concent_box .madan .btn {
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-align: center;
+    background: rgb(133,168,203);
+    /* line-height: 1px; */
+    /* border-radius: 10px; */
+    bottom: -14px;
+    margin-left: 62px;
+}
+.concent_box .madan .btn span {
+    width: 100px;
+    height: 0;
+    display: block;
+    /* margin: 10px; */
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    margin-left: -25px;
+    line-height: 7px;
+}
+.school .activity {
+    width: 100%;
+    text-align: center;
+    margin-top: 17px;
+    color: rgb(96,96,96);
+}
+.activity h2{
+    font-size: 18px;
+}
+.activity p{
+	font-size: 12px ;
+}
+.school .activity span {
+    display: block;
+    width: 110px;
+    height: 1px;
+    background: rgb(133,168,203);
+    margin: 10px auto;
+}
+.school .school_box {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.school .school_box .school_con img {
+    width: 314px;
+    height: 281px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.school .school_box .school_con {
+    width: 351px;
+    height: 410px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 20px 30px;
+    position: relative;
+}
+
+.school .school_box .school_con .sc_btn {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    background: rgb(133,168,203);
+    border-radius: 7px;
+    float: right;
+    right: 10px;
+    margin-top: -28px;
+    text-align: center;
+    line-height: 42px;
+    color: white;
+    font-size: 18px;
+}
+.school .school_box .school_con .sc_cen {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.school .school_box .school_con .sc_end {
+    position: absolute;
+    width: 314px;
+    height: 40px;
+    border-top: 1px solid grey;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    bottom: 0;
+}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+		
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<img src="img/qingliu1.jpg" />
+		        </div>
+		        <div class="swiper-slide">
+		        	<img src="img/qingliu2.jpg" />
+		        </div>
+		    </div>
+		    
+		    <!-- 如果需要导航按钮 -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+		   <div class="swpter_box">
+		   		<div class="swpter_con">
+		   			<h2>精英陪伴式留学申请服务</h2>
+		   		</div>
+		   </div>
+		</div>
+		
+		<div class="concent">
+			<div class="concent_box">
+				<div class="madan">
+					<h1>ADMISSIONS</h1>
+					<span class="one"></span>
+					<h2>录取案例</h2>
+					<span>
+						截至2019年，总签约学生数量达到500位+，获得1500+世界前100名校的offer，申请成功率100%。2019年秋季申请中，人均收获5.6个录取offer；其中美国申请方向，逾半数学生拿到奖学金
+					</span>
+					<div class="btn">
+						<a href="#"><span>offer</span></a>
+					</div>
+				</div>
+				<div class="madan">
+					<h1>ADVANTAGES</h1>
+					<span class="one"></span>
+					<h2>服务优势</h2>
+					<span class="tow">
+						专业而精细化的定位<br>
+						四位一体的服务模式<br>
+						服务的透明性<br>
+						职业规划指导<br>
+						清流校友会推荐<br>
+						... ...
+					</span>
+					<div class="btn">
+						<a href="#"><span>服务</span></a>
+					</div>
+				</div>
+				<div class="madan">
+					<h1>About US</h1>
+					<span class="one"></span>
+					<h2>团队介绍</h2>
+					<span>
+						清流教育是一家已成立七年的“精英陪伴式”留学咨询服务机构。通过吸纳麻省理工、宾大哥大、伯克利、卡梅、杜克、伦敦政经、帝国理工、港科大、港大、清北复交等国内外顶尖高校的留学精英，为承载留学梦想的广大学子提供美国、加拿大、英国、香港、新加坡等国家及地区的硕士申请服务。
+					</span>
+					<div class="btn">
+						<a href="#"><span>团队</span></a>
+					</div>
+				</div>
+				<div class="madan">
+					<h1>MENTORS</h1>
+					<span class="one"></span>
+					<h2>名师背景</h2>
+					<span>
+						留学咨询行业的核心竞争力是文书质量，决定文书质量的就是专业导师的行业知识、英语水平和责任心。清流筛选行业精英，全公司储备师资力量超200人，与流程导师、前端顾问一起为学生提供四位一体的服务。
+					</span>
+					<div class="btn">
+						<a href="#"><span>导师</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="school">
+			<div class="activity">
+				<h2>近期校园活动</h2>
+				<span></span>
+				<p>各类小型沙龙、讲座和一对一咨询，帮助更多同学明确申请定位</p>
+			</div>
+			<div class="school_box">
+				<div class="school_con">
+					<img src="img/sc3.jpg" />
+					<div class="sc_btn">
+						<span>线上讲座</span>
+					</div>
+					
+					<div class="sc_cen">
+						<span> 2020年2月15日</span><br />
+						<span>【GPA不高，如何逆袭去名校】</span>
+					</div>
+					<div class="sc_end">
+						<span>线上直播</span>
+					</div>
+					
+				</div>
+				<div class="school_con">
+					<img src="img/sc1.jpg" />
+					<div class="sc_btn">
+						<span>留学讲座</span>
+					</div>
+					
+					<div class="sc_cen">
+						<span> 2019年8月17日</span><br />
+						<span>【清流教育 x 汇丰银行】</span>
+					</div>
+					<div class="sc_end">
+						<span>陆家嘴-国金中心-汇丰银行大厦</span>
+					</div>
+				</div>
+				<div class="school_con">
+					<img src="img/sc2.jpg" />
+					<div class="sc_btn">
+						<span>线上讲座</span>
+					</div>
+					
+					<div class="sc_cen">
+						<span> 2018年11月25日</span><br />
+						<span>【非985、211，也可以逆袭拿下名校offer！】</span>
+					</div>
+					<div class="sc_end">
+						<span>上海财经大学</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<iframe src="footer.html" frameborder="0" width="100%"  scrolling="no" class="foo"></iframe>
+		
+		
+		<script type="text/javascript">
+			var mySwiper = new Swiper ('.swiper-container', {
+			    loop: true, 
+			    autoplay:true,
+			    autoplay: {
+			    delay: 2500,
+			    stopOnLastSlide: false,
+			    disableOnInteraction: false,
+			    },
+			    navigation: {
+			      nextEl: '.swiper-button-next',
+			      prevEl: '.swiper-button-prev',
+			    },
+			  }) 
+			  (function (win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+        function setFont() {
+            var cliWidth = html.clientWidth;
+            if(cliWidth > 750){
+                cliWidth  = 750;
+            }
+            html.style.fontSize = 100 * (cliWidth / 750) + 'px';
+        }
+ 
+        win.addEventListener('resize', setFont, false)
+        doc.addEventListener('DOMContentLoaded', setFont, false)
+    })(window, document);       
+		</script>
+	</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清流教育</title>
+    <!-- <link rel="stylesheet" href="css/commn.css"> -->
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <style type="text/css">
+        /*  */
+         
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hea{
+            position: fixed;
+            z-index: 10;
+            margin-top: -102px;
+        }
+        .foo{
+                height: 470px;
+            }
+        .con {
+            margin-top: 103px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .con img{
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+        }
+        /*  */
+        .content1{
+            background: rgb(244,244,244);
+            padding: 30px 0 0 0;
+        }
+        .til{
+            margin: 0 0 30px 0;
+        }
+        .title2{
+            text-align: center;
+            font-size: 32px;
+            line-height: 44px;
+            margin-top: 0px;
+            color: #000000;
+        }
+        .title3{
+            text-align: center;
+            font-size: 14px;
+            line-height: 44px;
+            color: #000000;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px  10px 0 10px;
+       }
+       .people{
+           display: flex;
+           flex-direction: row;/*设置子元素的排列方向*/
+           flex-wrap: wrap;/*溢出则换行*/
+           justify-content: center;
+           text-align: center;
+           padding: 0 10px;
+           margin-bottom: 50px;
+           position: relative;
+           margin: 0 auto;
+          
+       }
+       .people-box{
+           width:500px;
+           height:650px;
+           padding: 20px;
+           background: #ffffff;
+           box-shadow: 0 0 3px 3px #d6d5d5;
+           line-height: 30px;
+           margin: 50px 20px ;
+           /* 方大 */
+           overflow: hidden;
+           transition:all .4s;
+           -moz-transition:all .4s;
+           -webkit-transition:all .4s;
+           -o-transition:all .4s;
+           position: relative;
+           text-align: center;
+       }
+       .people-box:hover{
+           transform:scale(1.1);
+       }
+       .box-line{
+           width: 100%;
+           height: 2px;
+           border:1px solid rgb(133, 168, 202);
+       }
+       .box-line2{
+           width: 90%;
+           height: 2px;
+           border:1px solid rgb(133, 168, 202);
+           position: absolute;
+           bottom:20px;
+       }
+       .lin2{
+           display: flex;
+           justify-content: center;
+       }
+       .people-box img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+       .info{
+          width: 100%;
+          height:130px;
+          font-size: 16px;
+          margin-bottom: 20px;
+       }
+       .name{
+          margin-top: 20px;
+           font-size:30px;
+           width: 100%;
+           bottom:30px;
+           position: absolute;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+       @media screen and (max-width: 666px){
+         /* .content1{width: 666px; height: 100%} */
+    .con {
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .con img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .content1 {
+    background: rgb(244,244,244);
+    padding: 0 0 30px 0;
+}
+    .title2 {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    color: #000000;
+}
+
+.info {
+    width: 100%;
+    /* height: 108px; */
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+}
+.til {
+    margin: 0 0 0px 0;
+}
+.line12 {
+    width: 2rem;
+    height: 1px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 0.5rem;
+}
+.yuan22 {
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: small;
+    margin: 0.1rem 0.2rem 0 0.2rem;
+}
+.yuan2 {
+    color: rgb(133, 168, 202);
+    border-radius: 25%;
+    width: 10px;
+    height: 10px;
+}
+.yuan22 {
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: small;
+    margin: 0.2rem 0.2rem 0 0.2rem;
+}
+.people-box {
+    width: 157px;
+    height: 335px;
+    padding: 10px;
+    box-shadow: 0 0 3px 3px #d6d5d5;
+    line-height: 19px;
+    margin: 10px 10px;
+    position: relative;
+    text-align: center;
+}
+.people-box:hover{
+           transform:scale(1.1);
+       }
+       .people-box img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.name {
+    margin-top: 20px;
+    font-size: 16px;
+    bottom: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box-line2 {
+    width: 90%;
+    height: 2px;
+    border: 1px solid rgb(133, 168, 202);
+    position: absolute;
+    bottom: 10px;
+}
+       }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+    <!-- 图片 -->
+    <div class="con">
+        <img class="img" src="img/tearch/top-1.png" alt="">
+    </div>
+    <div class="content1 ">
+        <div class="til">
+            <p class="title2">美国方向</p>
+            <div class="line2">
+                <div class="line12"></div> 
+                <p class="yuan2">●</p>
+                <em class="yuan22">●</em>
+                <p class="yuan2">●</p>
+                <div class="line12"></div> 
+            </div>
+            <p class="title3">以下仅为部分导师背景</p>
+        </div>
+        <div class="people">
+            <div class="people-box">
+               <div class="box-line"></div>
+               <div class="lin2">
+                  <p class="yuan2">●</p>
+                  <em class="yuan22">●</em>
+                  <p class="yuan2">●</p>
+               </div>
+               <img src="img/tearch/images/首页-申请服务-导师final-3_03.png" alt="">
+               <p class="info">清华大学经济与金融本科<br>
+                麻省理工学院金融硕士<br>
+                TOEFL114 GRE327<br>
+                PwC/Boutique Bank<br>
+                中信投行工作经历</p>
+                <p class="name">Douglas Cao</p>
+               <div class="box-line2"></div>
+            </div>
+            <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch//images/2.png" alt="">
+                <p class="info">清流创始人兼CEO<br>
+                    波士顿大学金融数学硕士<br>
+                    TOEFL105 GMAT740<br>
+                    券商行研/独角兽教育机构投资并购工作经历</p>
+                 <p class="name">Jasper Zhao</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/3.png" alt="">
+                <p class="info">对外经贸大学金融学本科<br>
+                    哥伦比亚大学运筹学硕士<br>
+                    IELTS7.5 GRE331<br>
+                    任职于国内领先投行</p>
+                 <p class="name">Michael Hu</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_06.gif" alt="">
+                <p class="info">北京大学语言学本科<br>
+                    西北大学整合营销硕士<br>
+                    TOEFL110 GRE323<br>
+                    任职于战略咨询机构</p>
+                 <p class="name">Shirley Shi</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/5.png" alt="">
+                <p class="info">清华大学大学经济与金融本科<br>
+                    华盛顿大学公共政策硕士<br>
+                    清流教育教研团队主管</p>
+                 <p class="name">Ruoxi Zhuang</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/6.png" alt="">
+                <p class="info">上海财经大学国际商务本科<br>
+                    波士顿学院会计学硕士<br>
+                    TOEFL109 GMAT760<br>
+                    招商证券及德勤咨询工作经历</p>
+                 <p class="name">Ade Ye</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/7.png" alt="">
+                <p class="info">诺丁汉大学土木工程本科<br>
+                    杜克大学MQM硕士<br>
+                    GRE322<br>
+                    任职于顶级投行</p>
+                 <p class="name">Allen Gao</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_09.gif" alt="">
+                <p class="info">浙江大学财政学本科<br>
+                    哥伦比亚大学公共政策硕士<br>
+                    IELTS7.5 GMAT740<br>
+                    现任某外资银行分析师</p>
+                 <p class="name">Ethan Guo</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_11.png" alt="">
+                <p class="info">西南财经大学金融本科<br>
+                    杜克大学管理学硕士<br>
+                    TOEFL109 GMAT730<br>
+                    某500强外资银行总部管培生</p>
+                 <p class="name">Vince Xu</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_15.gif" alt="">
+                <p class="info">南开大学金融本科<br>
+                    加州大学圣地亚哥分校金融硕士<bR>
+                    TOEFL109 G331<br>
+                    任职于商业银行大数据分析</p>
+                 <p class="name">Leilani Hou</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_16.gif" alt="">
+                <p class="info">华东政法大学经济法本科<br>
+                    波士顿大学法学硕士<br>
+                    乔治城大学法学博士<br>
+                    TOEFL107<br>
+                    任职于Vault 50律所纽约办公室</p>
+                 <p class="name">Jeff Zhou</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_17.gif" alt="">
+                <p class="info">中国传媒大学传媒本科<br>
+                    南加州大学传媒硕士<br>
+                    TOEFL109<br>
+                    洛杉矶教育公司工作</p>
+                 <p class="name">Cornelia Wang</p>
+                <div class="box-line2"></div>
+             </div>
+        </div>
+    </div>
+    <div class="content1 ">
+        <div class="til">
+            <p class="title2">英港方向</p>
+            <div class="line2">
+                <div class="line12"></div> 
+                <p class="yuan2">●</p>
+                <em class="yuan22">●</em>
+                <p class="yuan2">●</p>
+                <div class="line12"></div> 
+            </div>
+            <p class="title3">以下仅为部分导师背景</p>
+        </div>
+        <div class="people">
+            <div class="people-box">
+               <div class="box-line"></div>
+               <div class="lin2">
+                  <p class="yuan2">●</p>
+                  <em class="yuan22">●</em>
+                  <p class="yuan2">●</p>
+               </div>
+               <img src="img/tearch/images/首页-申请服务-导师final-3_21.gif" alt="">
+               <p class="info">国际关系学院本科<br>
+                香港科技大学管理学硕士<br>
+                TOEFL106 GMAT710<br>
+                战略投资分析师</p>
+                <p class="name">Vivian Fu</p>
+               <div class="box-line2"></div>
+            </div>
+            <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_22.gif" alt="">
+                <p class="info">中山大学经济学本科<br>
+                    伦敦政经学院国际管理硕士<br>
+                    IELT57.5 GMAT730<br>
+                    任职于顶尖互联网公司商业分析</p>
+                 <p class="name">Qiuyao Lv</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_23.gif" alt="">
+                <p class="info">南开大学财务管理本科<br>
+                    香港大学金融硕士<br>
+                    IELTS 7.0 GRE325<br>
+                    任职于某券商行研</p>
+                 <p class="name">Mia Wang</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_27.gif" alt="">
+                <p class="info">早稻田大学数学系本科<br>
+                    帝国理工大学金融工程硕士<br>
+                    IELTS 7.5<br>
+                    任职于某券商总部</p>
+                 <p class="name">Chanson Wu</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_28.gif" alt="">
+                <p class="info">香港科技大学国际管理硕士<BR>
+                    IELTS 7.5 GMAT720<br>
+                    任职于500强公司海外运营总部</p>
+                 <p class="name">Chosephine Cao</p>
+                <div class="box-line2"></div>
+             </div>
+             <div class="people-box">
+                <div class="box-line"></div>
+                <div class="lin2">
+                   <p class="yuan2">●</p>
+                   <em class="yuan22">●</em>
+                   <p class="yuan2">●</p>
+                </div>
+                <img src="img/tearch/images/首页-申请服务-导师final-3_29.gif" alt="">
+                <p class="info">曼彻斯特大学经济学本科<br>
+                    帝国理工大学商业经济战略硕士<br>
+                    IELTS 8.0<br>
+                    任职于顶尖银行香港亚太总部</p>
+                 <p class="name">Bin Mei</p>
+                <div class="box-line2"></div>
+             </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <iframe src="footer.html" frameborder="0" width="100%"  scrolling="no" class="foo"></iframe>
+</body>
+</html>

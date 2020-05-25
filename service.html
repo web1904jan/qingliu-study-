@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<title>清流教育</title>
+	<link rel="stylesheet" href="css/all.css">
+	<style type="text/css">
+	*{
+	    margin: 0;
+        padding: 0;
+	    box-sizing: border-box;
+    }
+   .hea{
+	       position: fixed;
+	      z-index: 10;
+          margin-top: -102px;
+     }
+	.foo{
+		height: 470px;
+	}
+	 .top-head{
+		width:100%;
+		height: 900px;
+		margin-top: 103px;
+		position: relative;
+		
+	 }
+		.top-head img {
+            width: 100%;
+			height:100%;
+			margin-top: 50px;
+        }
+        .info{
+            width: 90%;
+            height:80%;
+            position: absolute;
+			top: 50%;
+			left: 50%;
+			/* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中 */
+			transform: translate(-50%,-43%);
+            border-radius: 20px;
+            /* background-color:#ffffff; */
+			background:rgba(255,255,255,0.8);
+            z-index: 10000;
+			text-align: center;
+			/* display: flex;
+			flex-wrap: wrap; */
+		}
+		.infos{
+			height: 100%;
+		   display: flex;
+		   /* flex-wrap: wrap; */
+		   justify-content:center;
+	   }
+	   .infos-b0x {
+    width: 25%;
+    height: 55%;
+    position: relative;
+    text-align: center;
+    margin: 1%;
+}
+       .infos-b0x img{
+		   width: 100%;
+		   height: 100%;
+		   /* opacity:1; */
+		   position: relative;
+	   }
+	   .infos-b0x .text{
+		   width: 100%;
+		   height: 100%;		   
+		   position: absolute;
+		   line-height: 35px;
+           font-size: 18px;
+		   top: 30%;
+		   left: 50%;
+		   transform: translateY(-50%);
+		   transform: translateX(-50%);
+		   letter-spacing: 7px; /* 字间距，相对数值 */
+	   }
+        /*  */
+        .title{
+			/* position: absolute; */
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+        }
+		.title5{
+            text-align: center;
+            font-size: 16px;
+            line-height: 44px;
+		}
+		.text1 {
+    /* position: absolute; */
+    /* left: 77px; */
+    /* top: -39px; */
+            font-size: 26px;
+            color: rgb(133, 168, 202);
+            font-weight: bold;
+			line-height: 70px;
+			margin-top: -20px;
+        }
+	  
+		.fish1 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    z-index: 1000;
+    top: -120px;
+    left: -17px;
+}
+	   .fish1 img{
+		   height: 100%;
+		   width: 100%;
+		   z-index: 1000;
+		   opacity: 1;
+	   }
+	   .fish2 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    z-index: 1000;
+    bottom: 22%;
+    right: -20px;
+}
+	   .fish1 img{
+		   height: 100%;
+		   width: 100%;
+		   z-index: 1000;
+		   opacity: 1;
+	   }
+	   .tab_head ul{
+    display: flex;
+    text-align: center;
+    margin: 2% 0;
+}
+.tab_head ul li{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head ul .show{
+    list-style: none;
+    width: 100%;
+	line-height: 102px;
+}
+.tab_head span{
+    position: relative;
+	width: 100%;
+	line-height: 16px;
+	float: left;
+	list-style: none;
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 1rem;
+}
+.tab-s1{
+    border-left: 2px solid #999999;
+}
+/* name */
+.init{
+	clear: both;
+	width: 100%;
+	height: 100%;
+	display: none;
+	border-top: none;
+    position: relative;
+	margin-bottom: 50px;
+}
+.show{
+	display: block;
+}
+       .title2{
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+            color: #000000;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px  10px 0 10px;
+       }
+	   /* 1 */
+	   .one{ 
+		   margin: 20px 50px;
+	   }
+	   .one-title{
+		   color: rgb(29, 115, 201);
+		   font-size: 40px;
+		   margin: 0 10px;
+		   text-align: left;
+		   font-weight: bold;
+		   
+	   }
+	   .one p span{
+		   font-size: 22px;
+		   font-weight: normal;
+	   }
+	   .box{
+		   width: 100%;
+		   height: 100%;
+		   padding:20px ;
+		   border:2px solid #999999;
+		   border-radius: 20px;
+		   margin: 20px 0;
+		   /* position: relative; */
+		   font-size: 16px;
+		   color: #666666;
+		   display: flex;
+		   justify-self: start;
+	   }
+	   .box-left{
+		   /* position: absolute; */
+		   top: 20px;
+		   left: 20px;
+		   width: 120px;
+		   height:100%;
+		   background-color: #666666;
+		   border-radius: 10px;
+		   text-align: center;
+		   margin-right: 60px;
+	   }
+	   .box-left p{
+		   color: #ffffff;
+		   font-size: 16px;
+		   line-height: 40px;
+	   }
+	   .status-list{
+		   /* margin-left: 15px; */
+		   width: 70%;
+		   border-left:2px dashed #999999;
+		   padding: 0  0 0 14px;
+		   text-align: justify;text-justify:inter-ideograph;
+	   }
+	   .status-list2{
+		   /* margin-left: 15px; */
+		   width: 70%;
+		   border-left:2px dashed rgb(133, 168, 202);
+		   padding: 0  0 0 14px;
+		   text-align: justify;text-justify:inter-ideograph;
+	   }
+	   .status-list3{
+		width: 70%;
+		   /* margin-left: 15px; */
+		   border-left:2px dashed rgb(9, 108, 207);
+		   padding: 0  0 0 14px;
+		   text-align: justify;text-justify:inter-ideograph;
+	   }
+	   .status-list  li p{
+		   line-height: 30px;
+		   /* margin-bottom: 40px; */
+	   }
+	   .status-list2  li p{
+		   line-height: 30px;
+		   /* margin-bottom: 40px; */
+	   }
+	   .status-list3  li p{
+		   line-height: 30px;
+		   /* margin-bottom: 40px; */
+	   }
+	   .box2{
+		   width: 100%;
+		   height: 100%;
+		   padding:  20px;
+		   border:2px solid #999999;
+		   border-radius: 20px;
+		   margin: 20px 0;
+		   font-size: 16px;
+		   color: rgb(133, 168, 202);
+		   display: flex;
+		   justify-self: start;
+	   }
+	   .box2-left{
+		   top: 20px;
+		   left: 20px;
+		   width: 120px;
+		   height:100%;
+		   background-color: rgb(133, 168, 202);
+		   border-radius: 10px;
+		   text-align: center;
+		   margin-right: 60px;
+	   }
+	   .box2-left p{
+		   color: #ffffff;
+		   font-size: 16px;
+		   line-height: 40px;
+	   }
+	   .box3{
+		   width: 100%;
+		   height: 100%;
+		   padding: 20px;
+		   border:2px solid #999999;
+		   border-radius: 20px;
+		   margin: 20px 0;
+		   font-size: 16px;
+		   color: rgb(9, 108, 207);
+		   display: flex;
+		   justify-self: start;
+	   }
+	   .box3-left{
+		   top: 20px;
+		   left: 20px;
+		   width: 120px;
+		   height:100%;
+		   background-color: rgb(9, 108, 207);
+		   border-radius: 10px;
+		   text-align: center;
+		   margin-right: 60px;
+	   }
+	   .box3-left p{
+		   color: #ffffff;
+		   font-size: 16px;
+		   line-height: 40px;
+	   }
+	   /* ////////////////////////////价格 */
+	   #content_2{
+		    clear: both;
+	        width: 100%;
+	        height: 100%;
+            background-color: #999999;
+			text-align: center;
+			padding: 0 0 80px 0;
+	        border-top: none;
+            position: relative;
+        }
+		.til3{
+			margin: 30px 0 ;
+		}
+       .title3{
+            text-align: center;
+            font-size: 30px;
+            line-height: 44px;
+            margin-top: 30px;
+            color: #ffffff;
+        }
+        /*  */
+       .line2{
+           display: flex;
+           justify-content: center;
+       }
+       .line12{
+           width: 100px;
+           height: 1px;
+           border:1px solid rgb(133, 168, 202);
+           margin: 10px;
+       }
+       .yuan2{
+            color:rgb(133, 168, 202);
+            border-radius: 25%;
+            width:10px;
+            height:10px;
+       }
+       .yuan22{
+           color:rgb(133, 168, 202);
+           font-family:"Simsun";
+            font-style:normal;
+            font-size: small;
+            margin: 5px  10px 0 10px;
+       }
+	   .tow-title{
+		   width: 80%;
+		   height: 100%;
+		   background-color: rgb(133, 168, 202);
+		   text-align: center;
+		   padding: 20px;
+		   line-height: 30px;
+		   color: #ffffff;
+		   font-size: 22px;
+		   margin:-120px auto 0 auto;
+		   position: relative;
+		   z-index: 1000;
+	   }
+	   /*  */
+	   .tow-box{
+		   width: 90%;
+		   height: 100%;
+		   padding:70px 80px;
+		   border:2px solid #333333;
+		  box-shadow: 0 0 10px 10px  #727070;
+		   margin: 100px auto 0 auto ;
+		  
+		   font-size: 16px;
+	   }
+	   .box-1-title{
+		   text-align: left;
+		   color: #ffffff;
+		   font-size: 18px;
+		   font-weight: bold;
+		   margin-top: 30px;
+	   }
+	   .xian {
+    width: 71px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 92px;
+    /* margin: 3px 0 0; */
+}
+.xian2 {
+    width: 90px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 127px;
+    /* margin: 3px 0 0; */
+}
+.xian3 {
+    width: 71px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 135px;
+    /* margin: 3px 0 0; */
+}
+.xian4 {
+    width: 90px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 170px;
+    /* margin: 3px 0 0; */
+}
+
+	   .time{
+		   display: flex;
+		  justify-content: space-between;
+           margin: 30px 0;
+		   color: #ffffff;
+	   }
+	   .money{
+		   width: 60px;
+		   height: 20px;
+		   background-color: #ffffff;
+		   color: rgb(31, 29, 29);
+		   text-align: center;
+		   line-height: 20px;
+		   margin-top: 10px;
+	   }
+	   /* 斜线 */
+	   .x-line{
+	     	width: 6rem;
+            height: 4rem;
+	     	margin-top: 20px;
+            border-bottom: 0.15rem solid #ffffff;
+            -webkit-transform: rotate(145deg);
+            -moz-transform: rotate(145deg);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(Rotation=0.55);
+       }
+	   /*  */
+	   .t-box-2{
+		   display: flex;
+		   justify-content: flex-start;
+		   margin-top: 40px;
+		   color: #ffffff;
+	   }
+	   .t-box2-left{
+		   width: 50%;
+		   height: 100%;
+		   text-align: left;
+	   }
+	   .t-box2-left2{
+		   width: 50%;
+		   height: 100%;
+		   padding: 0  0 0 40px;
+		   text-align: left;
+		   border-left: 2px dashed #ffffff;
+	   }
+	   .t-box2-left .left-n{
+		   font-size: 18px;
+		   font-weight: bold;
+		   line-height: 40px;
+		   
+	   }
+	   .t-box2-left2 .left-n{
+		   font-size: 18px;
+		   font-weight: bold;
+		   line-height: 40px;
+		   
+	   }
+	   .left-mone{
+		   display: flex;
+		   justify-content: space-between;
+		   margin-right: 30px;
+		   line-height: 40px;
+	   }
+	   /*  */
+	   .tow-box2{
+		   width: 90%;
+		   height: 100%;
+		   padding:70px 80px;
+		   border:2px solid #333333;
+		   box-shadow: 0 0 10px 10px  #727070;
+		   margin: 130px auto 0px auto;
+           font-size: 16px;
+	   }
+	   .f-l{
+		   width: 100%;
+		   height: 50px;
+		   background-color: #666666;
+		   text-align: center;
+		   margin: 80px 0;
+	   }
+	   
+
+
+
+
+	   @media screen and (max-width: 666px){
+		.top-head{
+    width:100%;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    
+ }
+    .top-head img {
+        width: 100%;
+        height:100%;
+        margin-top: 0px;
+    }
+    .info{
+        width: 92%;
+        height:70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中 */
+        transform: translate(-50%,-50%);
+        border-radius: 20px;
+        background-color:#ffffff;
+        opacity: 0.9;
+        z-index: 10000;
+        text-align: center;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+    .infos{
+        height: 100%;
+       display: flex;
+       /* flex-wrap: wrap; */
+       justify-content:center;
+   }
+   .infos p {
+    line-height: 1rem;
+    text-align: left;
+    margin: 0 1.4rem;
+}
+.infos-b0x {
+    width: 103px;
+    height: 140px;
+    position: relative;
+    text-align: center;
+    margin: 29px 5px;
+}
+   .infos-b0x img{
+       width: 100%;
+       height: 100%;
+       position: relative;
+   }
+   .infos-b0x .text{
+       width: 95%;
+       height: 100%;		   
+       position: absolute;
+       line-height: 30px;
+       font-size: 12px;
+       top: 10%;
+       left:30%;
+       transform: translateY(-50%);
+       transform: translateX(-50%);
+       letter-spacing: 2px; /*字间距，相对数值*/
+
+   }
+   
+
+.text1 {
+    position: absolute;
+    left: 18px;
+	top: 0px;
+	width: 100%;
+    font-size: 14px;
+    color: rgb(133, 168, 202);
+    font-weight: bold;
+    line-height: 70px;
+	margin-top: -20px;
+	margin-left: 50px;
+	text-align: center;
+}
+.text .t2 {
+    width: 100%;
+    font-size: 12px;
+    color: #222222;
+    text-align: center;
+    margin-top: 27px;
+}
+    /*  */
+    .title{
+        /* position: absolute; */
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top:10px;
+    }
+    .title5{
+        text-align: center;
+        font-size: 12px;
+        line-height:20px;
+    }
+    
+  
+    .fish1 {
+position: absolute;
+height: 30px;
+width: 30px;
+z-index: 1000;
+top: -35px;
+left: 10px;
+}
+   .fish1 img{
+       height: 100%;
+       width: 100%;
+       z-index: 1000;
+   }
+   .fish2 {
+position: absolute;
+height: 30px;
+width: 30px;
+z-index: 1000;
+bottom: 10%;
+right: -34px;
+}
+   .fish1 img{
+       height: 100%;
+       width: 100%;
+       z-index: 1000;
+   }
+    /*  导航*/
+   
+/* name */
+.init{
+clear: both;
+width: 100%;
+height: 100%;
+display: none;
+border-top: none;
+position: relative;
+margin-bottom: 50px;
+}
+/* .init{
+		    clear: both;
+	        width: 100%;
+	        height: 100%;
+            background-color: #999999;
+			text-align: center;
+			padding: 0 0 80px 0;
+	        border-top: none;
+            position: relative;
+        } */
+.show{
+display: block;
+}
+   
+   /* 1 */
+   .one{ 
+       margin: 20px 10px;
+   }
+   .one-title{
+       color: rgb(29, 115, 201);
+       font-size: 18px;
+       margin: 0 10px;
+       text-align: left;
+       font-weight: bold;
+       
+   }
+   .one p span{
+       font-size: 16px;
+       font-weight: normal;
+   }
+   .box{
+       width: 100%;
+       height: 100%;
+       padding:20px ;
+       border:2px solid #999999;
+       border-radius: 20px;
+       margin: 20px 0;
+       /* position: relative; */
+       font-size: 12px;
+       color: #666666;
+       display: flex;
+       justify-self: start;
+   }
+   .box-left{
+       /* position: absolute; */
+       top: 20px;
+       left: 20px;
+       width: 120px;
+       height:20px;
+       background-color: #666666;
+       border-radius: 5px;
+       text-align: center;
+       margin-right: 10px;
+   }
+   .box-left p{
+       color: #ffffff;
+       font-size: 12px;
+       line-height: 20px;
+   }
+   .status-list{
+	   width: 170%;
+       /* margin-left: 15px; */
+	   /* width: 550px; */
+       border-left:2px dashed #999999;
+       padding: 0  0 0 12px;
+	   text-align: justify;text-justify:inter-ideograph;
+   }
+   .status-list2{
+	   width: 170%;
+       /* margin-left: 15px; */
+       border-left:2px dashed rgb(133, 168, 202);
+       padding: 0  0 0 12px;
+	   text-align: justify;text-justify:inter-ideograph;
+   }
+   .status-list3{
+	width: 145%;
+       /* margin-left: 15px; */
+       border-left:2px dashed rgb(9, 108, 207);
+       padding: 0  0 0 12px;
+	   text-align: justify;text-justify:inter-ideograph;
+   }
+   .status-list  li p{
+       line-height: 30px;
+       /* margin-bottom: 40px; */
+   }
+   .status-list2  li p{
+       line-height: 30px;
+       /* margin-bottom: 40px; */
+   }
+   .status-list3  li p{
+       line-height: 30px;
+       /* margin-bottom: 40px; */
+   }
+   .box2{
+       width: 100%;
+       height: 100%;
+       padding:  20px;
+       border:2px solid #999999;
+       border-radius: 20px;
+       margin: 20px 0;
+       font-size: 12px;
+       color: rgb(133, 168, 202);
+       display: flex;
+       justify-self: start;
+   }
+   .box2-left {
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: 100%;
+    background-color: rgb(133, 168, 202);
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+   .box2-left p{
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+   }
+   .box3{
+       width: 100%;
+       height: 100%;
+       padding: 20px;
+       border:2px solid #999999;
+       border-radius: 20px;
+       margin: 20px 0;
+       font-size: 12px;
+       color: rgb(9, 108, 207);
+       display: flex;
+       justify-self: start;
+   }
+   .box3-left {
+	  top: 20px;
+       left: 20px;
+       width: 95px;
+       height:20px;
+       background-color: rgb(9, 108, 207);
+       border-radius: 5px;
+       text-align: center;
+       margin-right: 10px;
+}
+   .box3-left p{
+       color: #ffffff;
+       font-size: 12px;
+       line-height: 20px;
+   }
+   /* ////////////////////////////价格 */
+   .init2{
+        clear: both;
+        width: 100%;
+        height: 100%;
+        background-color: #999999;
+        text-align: center;
+        padding:0 10px;
+        border-top: none;
+        position: relative;
+    }
+    .til3{
+        margin: 10px 0 ;
+    }
+   .title3{
+        text-align: center;
+        font-size: 16px;
+        line-height: 44px;
+        margin-top: 30px;
+        color: #ffffff;
+    }
+    /*  */
+   .line2{
+       display: none;
+       justify-content: center;
+   }
+   .line12{
+       width: 100px;
+       height: 1px;
+       border:1px solid rgb(133, 168, 202);
+       margin: 10px;
+   }
+   .yuan2{
+        color:rgb(133, 168, 202);
+        border-radius: 25%;
+        width:10px;
+        height:10px;
+   }
+   .yuan22{
+       color:rgb(133, 168, 202);
+       font-family:"Simsun";
+        font-style:normal;
+        font-size: small;
+        margin: 5px  10px 0 10px;
+   }
+   .tow-title {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(133, 168, 202);
+    text-align: center;
+    padding: 8px;
+    line-height: 17px;
+    color: #ffffff;
+    font-size: 12px;
+    margin: -106px auto 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+   /*  */
+   .tow-box{
+    width: 90%;
+    height: 100%;
+    padding: 70px 10px;
+    border: 2px solid #333333;
+    box-shadow: 0 0 10px 10px #727070;
+    margin: 40px auto;
+    font-size: 16px;
+}
+
+.box-1-title {
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.xian {
+    width: 56px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 70px;
+    /* margin: 3px 0 0; */
+}
+.xian2 {
+    width: 69px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 98px;
+    /* margin: 3px 0 0; */
+}
+.xian3 {
+    width: 55px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 105px;
+    /* margin: 3px 0 0; */
+}
+.xian4 {
+    width: 68px;
+    size: 2;
+    color: #ffffff;
+    /* text-align: right; */
+    margin-left: 133px;
+    /* margin: 3px 0 0; */
+}
+   .box-1-title a{
+       text-align: left;
+       color: #ffffff;
+       font-weight: bold;
+   }
+   .time{
+       display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+       margin: 30px 0;
+       color: #ffffff;
+   }
+   .money{
+       width: 40px;
+       height: 20px;
+       background-color: #ffffff;
+       color: rgb(31, 29, 29);
+       text-align: center;
+       line-height: 20px;
+       margin-top: 10px;
+   }
+   /* 斜线 */
+   .x-line{
+         width: 3rem;
+        height: 0rem;
+         margin-top: 20px;
+        border-bottom: 0.15rem solid #ffffff;
+        -webkit-transform: rotate(130deg);
+        -moz-transform: rotate(145deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(Rotation=0.55);
+   }
+   /*  */
+   .t-box-2{
+       display: flex;
+       justify-content: flex-start;
+       margin-top: 40px;
+       color: #ffffff;
+   }
+   .t-box2-left{
+       width: 50%;
+       height: 100%;
+       text-align: left;
+   }
+   .t-box2-left2{
+       width: 50%;
+       height: 100%;
+       padding: 0  0 0 10px;
+       text-align: left;
+       border-left: 2px dashed #ffffff;
+   }
+   .t-box2-left .left-n {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.t-box2-left2 .left-n {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+   .left-mone{
+       display: flex;
+       justify-content: space-between;
+       margin-right: 10px;
+       line-height: 20px;
+       font-size: 12px;
+   }
+   /*  */
+   .tow-box2{
+       width: 90%;
+       height: 100%;
+       padding:70px 10px;
+       border:2px solid #333333;
+       box-shadow: 0 0 10px 10px  #727070;
+       margin: 50px auto 0px auto;
+       font-size: 16px;
+   }
+   .f-l{
+       width: 100%;
+       height: 30px;
+       background-color: #666666;
+       text-align: center;
+       margin: 30px 0;
+   }
+   .tab_head ul {
+    display: flex;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.tab_head span {
+    position: relative;
+    width: 100%;
+    line-height: 18px;
+    float: left;
+    list-style: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-size: 0.6rem;
+}
+.text {
+    margin: 10px 0;
+    height: 57px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 22px;
+}
+.title2 {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 0.6rem;
+    color: #000000;
+}
+.line12 {
+    width: 2rem;
+    height: 1px;
+    border: 1px solid rgb(133, 168, 202);
+    margin: 0.5rem;
+}
+.yuan2 {
+    color: rgb(133, 168, 202);
+    border-radius: 25%;
+    width: 5px;
+    height: 5px;
+}
+.yuan22{
+    color: rgb(133, 168, 202);
+    font-family: "Simsun";
+    font-style: normal;
+    font-size: small;
+    margin: 0.2rem;
+}
+	   }
+	</style>
+</head>
+<body>
+	<!-- 引入头部 -->
+	<iframe src="header.html" frameborder="0" width="100%"  scrolling="no" class="hea"></iframe>
+	<!-- pic -->
+	<div class="top-head">
+		<img src="img/small-business-owner-planning-productivity.jpg" alt="">
+		<div class="info">
+			<p class="title">陪伴式留学申请服务</p>
+			<p class="title5">精英导师三位一体</p>						
+			<div class="infos">
+				<div class="infos-b0x">					
+				  <img src="img/box.png" alt="">
+					<div class="text">
+						<div  class="fish1" ><img src="/img/fish1.png" alt=""></div>
+						<p class="text1">专业导师</p>
+						<p class="t2">背景提升掌舵<br>职业方向咨询<br>选校项目规划<br>文字撰写打磨</p>
+						<div  class="fish2" ><img src="/img/fish2.png" alt=""></div>
+					</div>
+			      </img>
+				</div>
+				<div class="infos-b0x">					
+					<img src="img/box.png" alt="">
+					  <div class="text">
+						  <div  class="fish1" ><img src="/img/fish1.png" alt=""></div>
+						  <p class="text1">流程导师</p>
+						  <p class="t2">备考进度追踪<br>专业信息整合<br>网申填写指导<br>申请心态“按摩</p>
+						  <div  class="fish2" ><img src="/img/fish2.png" alt=""></div>
+					  </div>
+					</img>
+				  </div>
+				  <div class="infos-b0x">					
+					<img src="img/box.png" alt="">
+					  <div class="text">
+						  <div  class="fish1" ><img src="/img/fish1.png" alt=""></div>
+						  <p class="text1">北美外教</p>
+						  <p class="t2">文书打磨润色<br>口语提升一对一<br>模拟面试指导磨</p>
+						  <div  class="fish2" ><img src="/img/fish2.png" alt=""></div>
+					  </div>
+					</img>
+				  </div>
+			</div>
+			
+		</img>
+	</div>
+	<!--导航 -->
+	<div class="tab_head"> 
+		<ul>
+			<li id="tab1" data-season="1" class="active"><span >服务流程</span></li>
+			<li id="tab2" data-season="2"><span class="tab-s1">服务价格</span></li>
+	</div>
+	<!-- 导航内容 -->
+    <div class="tab_content">
+		<div id="content_1" class="init show">
+            <!--  name-->
+			<div class="til">
+                <p class="title2">服务流程</p>
+                    <div class="line2">
+                        <div class="line12"></div> 
+                        <p class="yuan2">●</p>
+                        <em class="yuan22">●</em>
+                        <p class="yuan2">●</p>
+                        <div class="line12"></div> 
+                    </div>
+			</div>
+			<div class="one">
+				<p class="one-title">1.<span>申请前期（签约 - 6月底）</span></p>
+			    <div class="box"> 
+					<div class="box-left"><p>专业导师</p></div>
+					
+					<ul class="status-list">
+						<li>
+							<p>在详细了解学生背景和兴趣后，为学生介绍意向专业课程设置、申请难度以及就业情况</p>
+						</li>
+						<li><p>制作详细的《申请进度规划表》，优化申请环节中各时间段的安排</p></li>
+						<li><p>根据学生申请专业方向，进行选课、校园实践及科研项目的指导规划，全面提升学生的
+							专业竞争力</p></li>
+						<li><p>进行实习申请的简历修改和实习面试指导</p></li>
+					</ul>
+				</div>
+				<div class="box2"> 
+					<div class="box2-left"><p>流程导师</p></div>
+					
+					<ul class="status-list2">
+						<li>
+							<p>根据申请规划表持续追踪学生准备进度，保证沟通频率</p>
+						</li>
+						<li><p>分享清流内部核心语言考试备考资料 包（ 分别由托福114、雅思8、GMAT770及
+							GRE331分的导师收集整理）</p></li>
+						<li><p>设定目标成绩，督促备考进度</p></li>
+					</ul>
+			    </div>
+			</div>
+			<div class="one">
+				<p class="one-title">2.<span>申请中期（7月 - 次年3月）</span></p>
+			    <div class="box"> 
+					<div class="box-left"><p>专业导师</p></div>
+					
+					<ul class="status-list">
+						<li>
+							<p>根据学生背景和目标，结合往年成功申请案例，评估录取可能性，依据地理位置、学校
+								排名、课程设置以及就业等因素精准确定选校方案</p>
+						</li>
+						<li><p>提炼学生经历素材，挖掘闪光点，进行简历中文稿的初步制作</p></li>
+						<li><p>根据学生的意见反馈，进行英文简历的初稿撰写</p></li>
+						<li><p>与学生进一步沟通打磨简历，定稿内容后交由外教润色语言</p></li>
+						<li><p>结合申请专业筛选出最适合的推荐人，指导学生和推荐人联系，搜集推荐信的素材，进
+							行三封推荐信的撰写</p></li>
+						<li><p>与学生进行头脑风暴，确定短期和长期职业规划后进行个人陈述的素材收集；根据该职
+							业规划所需的技能和经验，进行相关领域和方向的深度挖掘，厘清逻辑和结构，突出学
+							<br>生专业性与个人能力亮点</p></li>
+						<li><p>根据申请专业所需要求，进行个人陈述中文稿框架搭建，并与学生沟通确认，在定稿中
+							文稿的基础上进行个人陈述英文稿的撰写</p></li>
+						<li><p>收集Essays素材并撰写，深化深度，呼应题目,追求严谨完善的文书效果</p></li>
+					</ul>
+				</div>
+				<div class="box2"> 
+					<div class="box2-left"><p>流程导师</p></div>
+					
+					<ul class="status-list2">
+						<li>
+							<p>指导申请所需的材料准备及寄送，包括成绩单、在读证明、财产证明等材料，协助学生
+								进行WES成绩认证，指导学生完成托福/雅思/GRE/GMAT考试的材料寄送</p>
+						</li>
+						<li><p>指导学生进行网申，由学生亲自掌握网申账号，保证透明性；同时协助学生进行网申表
+							格填写，并由流程老师登陆账号检查准确性</p></li>
+						<li><p>指导学生与学校招生官进行直接的邮件或电话沟通，在申请前留下较好的印象</p></li>
+						<li><p>跟进学校录取状态，提醒学生补充相关材料</p></li>
+						<li><p>指导学生和学校进行面试时间预约，结合清流整合的1000+面试题库以及答题思路，指
+							导学生进行面试答案准备，并进行答疑解惑</p></li>
+					</ul>
+				</div>
+				<div class="box3"> 
+					<div class="box3-left"><p>北美外教</p></div>
+					
+					<ul class="status-list3">
+						<li>
+							<p>每一篇文书（除推荐信外）均由北美外教润色定稿</p>
+						</li>
+						<li><p>三节一小时1对1口语培训，针对性纠正语音语调</p></li>
+						<li><p>一节20分钟模拟面试，梳理学校面试风格以及考核要点，指导学生进行有针对性的准备</p></li>
+					</ul>
+			    </div>
+			</div>
+			<div class="one">
+				<p class="one-title">3.<span>申请后期（次年3月后 - 入学）</span></p>
+			    <div class="box"> 
+					<div class="box-left"><p>专业导师</p></div>
+					
+					<ul class="status-list">
+						<li>
+							<p>从学校名气、地理位置、课程设置及就业支持等方面与学生深入分析每个录取专业的优
+								缺点，帮助学生做出最适合自己的选择</p>
+						</li>
+					</ul>
+				</div>
+				<div class="box2"> 
+					<div class="box2-left"><p>流程导师</p></div>
+					
+					<ul class="status-list2">
+						<li>
+							<p>指导学生办理入学手续，包括邮件答复、定金支付及缴纳学费等手续</p>
+						</li>
+						<li><p>介绍院校情况、城市情况，提供行前准备指导（体检、医疗保险、疫苗等）</p></li>
+						<li><p>指导学生进行签证准备，分析签证流程</p></li>
+						<li><p>指导学生机票购买及入境攻略，提醒租房注意事项</p></li>
+					</ul>
+			    </div>
+			</div>
+        </div>
+		<div id="content_2" class="init">
+            <div class="til3">
+                <p class="title3">服务价格</p>
+                    <div class="line2">
+                        <div class="line12"></div> 
+                        <p class="yuan2">●</p>
+                        <em class="yuan22">●</em>
+                        <p class="yuan2">●</p>
+                        <div class="line12"></div> 
+                    </div>
+			</div>
+			<div class="tow-box">
+				<div class="tow-title">
+					<p>清流教育美国留学申请服务价格表</p>
+					<p>2020年1月1日起施行</p>
+				</div>
+				<div class="tow-box-1">
+					<div class="box-1-1">
+					    <p class="box-1-title">美国研究生申情全套</p>
+					    <hr class="xian"/>
+					  <div class="time">
+						<div class="time-list">
+							<p>4月1日前签</p>
+							<p class="money">61800</p>
+						</div> 
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>7月1日前签</p>
+							<p class="money">62800</p>
+						</div>
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>10月1日前签</p>
+							<p class="money">63800</p>
+						</div>
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>10月1日后签</p>
+							<p class="money">64800</p>
+						</div> 
+					  </div>
+				    </div>
+					<hr style="border: 2px dashed  #ffffff; width: 100%;height:1px;" />
+				    <div class="box-1-1">
+						<p class="box-1-title">美国研究生申请单文书服务</p>
+						<hr class="xian2"/>
+						<div class="time">
+						  <div class="time-list">
+							  <p>4月1日前签</p>
+							  <p class="money">45800</p>
+						  </div> 
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>7月1日前签</p>
+							  <p class="money">46800</p>
+						  </div>
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>10月1日前签</p>
+							  <p class="money">47800</p>
+						  </div>
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>10月1日后签</p>
+							  <p class="money">48800</p>
+						  </div> 
+						</div>
+					</div>
+					<hr style="border: 2px dashed  #ffffff; width: 100%;height:1px;" />
+				</div>
+				<div class="t-box-2">
+					<div class="t-box2-left">
+						<p class="left-n">增加国别/专业费用:</p>
+						<div class="left-mone">
+							<p>1.新增美国其他相关专业申请</p>
+							<p>8000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>2.增加英国同专业申请</p>
+							<p>8000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>3.增加香港或加拿大同专业申请</p>
+							<p>6000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>4.增加新加坡同专业申请</p>
+							<p>4000元/个</p>
+						</div>
+					</div>
+					<div class="t-box2-left2">
+						<p class="left-n">优惠方案：</p>
+						<div class="left-mone">
+							<p>1. 清流已签约学员推荐优惠1000元</p>
+						</div>
+						<div class="left-mone">
+							<p>2. 大三下之前签约优惠1000元（按当年的8月1日为节点）</p>
+						</div>
+						<div class="left-mone">
+							<p>3. 大二下之前签约优惠2000元（按当年的8月1日为节点）</p>
+						</div>
+						<div class="left-mone">
+							<p>4. 大一下之前签约优惠3000元（按当年的8月1日为节点）</p>
+						</div>
+							<div class="left-mone">
+							<p>5. 签约后发朋友圈介绍清流获30个赞并保留48小时优惠1000元</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="f-l"></div>
+			<div class="tow-box2">
+				<div class="tow-title">
+					<p>清流教育英国/香港留学申请服务价格表</p>
+					<p>2020年1月1日起施行</p>
+				</div>
+				<div class="tow-box-1">
+					<div class="box-1-1">
+					  <p class="box-1-title">英国/香港研究生申情全套</p>
+					  <hr class="xian3"/>
+					  <div class="time">
+						<div class="time-list">
+							<p>4月1日前签</p>
+							<p class="money">33800</p>
+						</div> 
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>7月1日前签</p>
+							<p class="money">34800</p>
+						</div>
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>10月1日前签</p>
+							<p class="money">35800</p>
+						</div>
+						<p class="x-line"></p>
+						<div class="time-list">
+							<p>10月1日后签</p>
+							<p class="money">36800</p>
+						</div> 
+					  </div>
+				    </div>
+					<hr style="border: 2px dashed  #ffffff; width: 100%;height:1px;" />
+				    <div class="box-1-1">
+						<p class="box-1-title">英国/香港研究生申请单文书服务</p>
+						<hr class="xian4" />
+						<div class="time">
+						  <div class="time-list">
+							  <p>4月1日前签</p>
+							  <p class="money">23800</p>
+						  </div> 
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>7月1日前签</p>
+							  <p class="money">24800</p>
+						  </div>
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>10月1日前签</p>
+							  <p class="money">25800</p>
+						  </div>
+						  <p class="x-line"></p>
+						  <div class="time-list">
+							  <p>10月1日后签</p>
+							  <p class="money">26800</p>
+						  </div> 
+						</div>
+					</div>
+					<hr style="border: 2px dashed  #ffffff; width: 100%;height:1px;" />
+				</div>
+				<div class="t-box-2">
+					<div class="t-box2-left">
+						<p class="left-n">增加国别/专业费用:</p>
+						<div class="left-mone">
+							<p>1.新增美国其他相关专业申请</p>
+							<p>8000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>2.增加香港同专业申请</p>
+							<p>8000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>3.增加新加坡同专业申请</p>
+							<p>6000元/个</p>
+						</div>
+						<div class="left-mone">
+							<p>4.增加美国或加拿大同专业申请</p>
+							<p>补差价</p>
+						</div>
+					</div>
+					<div class="t-box2-left2">
+						<p class="left-n">优惠方案：</p>
+						<div class="left-mone">
+							<p>1. 清流已签约学员推荐优惠1000元</p>
+						</div>
+						<div class="left-mone">
+							<p>2. 大三下之前签约优惠1000元（按当年的8月1日为节点）</p>
+						</div>
+						<div class="left-mone">
+							<p>3. 大二下之前签约优惠2000元（按当年的8月1日为节点）</p>
+						</div>
+						<div class="left-mone">
+							<p>4. 大一下之前签约优惠3000元（按当年的8月1日为节点）</p>
+						</div>
+							<div class="left-mone">
+							<p>5. 签约后发朋友圈介绍清流获30个赞并保留48小时优惠1000元</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>		
+    </div>
+	<!-- 尾部 -->
+    <iframe src="footer.html" frameborder="0" width="100%"  scrolling="no" class="foo"></iframe>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#tab1,#tab2").click(function() {
+			//获取标签页代号
+			var num = $.trim($(this).attr("data-season"));
+			//删除兄弟元素的 active 类样式
+			$("#tab"+num).siblings().removeClass("active");
+			$("#tab"+num).addClass("active");
+			$("#content_"+num).siblings().removeClass("show");
+			$("#content_"+num).addClass("show");
+        });
+	})
+</script>
+</html>
